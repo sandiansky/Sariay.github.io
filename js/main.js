@@ -15,7 +15,7 @@ jQuery(document).ready(function($){
 			$("#status").fadeIn("slow");
 
 			//fade out the white DIV that covers the website
-			$("#preloader").delay(400).fadeOut("slow"); 
+			$("#preloader").delay(2000).fadeOut("slow"); 
 		});	
 	}; 
 
