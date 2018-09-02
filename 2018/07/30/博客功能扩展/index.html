@@ -1,0 +1,628 @@
+<!--There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!-->
+<!DOCTYPE html>
+<html>
+	
+
+<head>
+	<title>博客功能扩展</title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="apple-mobile-web-app-title" content="Amaze UI" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="songci">
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+   	<!-- css -->
+	<link rel="stylesheet" href="/css/style.css">		
+	<!-- favicon -->
+	<link href="/img/favicon.ico" rel="Shortcut Icon" type="image/ico">
+	<!-- font-awesome -->
+	<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+
+
+<body>	
+	<!--Preloader-->
+<div id="preloader">
+	<div id="status">
+		<img alt="preloader" src="/img/logo.png">
+	</div>
+</div>
+<!--Preloader end-->
+
+
+	<header>
+
+	
+		<div id="cd-logo"><a href="/"><img src="/img/logo.png" alt="Logo"></a></div>
+	
+		
+		
+ 		<p class="motto"></p>
+	
+	
+	
+		
+			<p class="page-name">博客功能扩展</p>
+		
+		
+	
+</header>
+
+<div id="cd-nav">
+	<a href="#0" class="cd-nav-trigger">Menu<span></span></a>
+
+	<nav id="cd-main-nav">
+		<ul>
+			
+      		<li class="fa fa-/">
+           		<a href="/" title="主页">主页</a>	
+      		</li>
+    		
+      		<li class="fa fa-/archives">
+           		<a href="/archives" title="归档">归档</a>	
+      		</li>
+    		
+      		<li class="fa fa-/categories">
+           		<a href="/categories" title="分类">分类</a>	
+      		</li>
+    		
+      		<li class="fa fa-/tags">
+           		<a href="/tags" title="标签">标签</a>	
+      		</li>
+    		
+      		<li class="fa fa-/about">
+           		<a href="/about" title="关于">关于</a>	
+      		</li>
+    		
+      		<li class="fa fa-/gallery">
+           		<a href="/gallery" title="相册">相册</a>	
+      		</li>
+    		
+    		
+        	
+            	<li><a href="javascript:;" class="popup-trigger" title="Search">搜索</a></li>
+        	
+		</ul>
+	</nav>
+</div>
+
+
+	<main>
+	<div class="page-container">
+	<!-- content srart -->
+<div class="am-g am-g-fixed blog-fixed blog-content">
+	<div class="am-u-md-8 am-u-sm-12">
+
+		<article class="am-article blog-article-p">
+			<div class="am-article-hd">
+				
+
+
+				<h1 class="am-article-title blog-text-center">
+					
+					
+	
+		<a href="/2018/07/30/博客功能扩展/" itemprop="url">		
+			博客功能扩展		
+		</a>
+	
+
+
+
+				</h1>
+
+				<p class="am-article-meta blog-text-center">
+					<span>
+						<i class="fa fa-clock-o"></i> 
+						<a href="/2018/07/30/博客功能扩展/" itemprop="url">
+	<time datetime="2018-07-29T16:18:51.000Z" itemprop="datePublished">
+  		2018-07-30
+  </time>
+</a>    
+&nbsp
+					</span>
+					<span>						
+						
+							<i class="fa fa-tags"></i>
+							
+								<a href="#开发实践" title="开发实践" rel="3">开发实践</a>&nbsp
+													 											
+						
+					</span>	
+				</p>
+			</div>	
+
+			<div class="am-article-bd">
+				<div class="content">
+					<p><strong>任务清单</strong>（<code>todo list</code>）</p>
+<ul>
+<li style="list-style: none"><input type="checkbox" checked> 归档页</li>
+<li style="list-style: none"><input type="checkbox" checked> 分类页</li>
+<li style="list-style: none"><input type="checkbox" checked> 标签页</li>
+<li style="list-style: none"><input type="checkbox" checked> 相册页 <code>2018年7月30日</code></li>
+<li style="list-style: none"><input type="checkbox" checked> 搜索页 <code>2018年7月31日</code></li>
+<li style="list-style: none"><input type="checkbox"> 时间页</li>
+<li style="list-style: none"><input type="checkbox" checked> 安装<code>hexo-related-popular-posts</code>插件 <code>2018年8月1日</code></li>
+<li style="list-style: none"><input type="checkbox"> 文章加密访问、前端加密类<code>hexo-encrypt</code>、<code>hexo-blog-encrypt</code>（废弃的API，<u>放弃折腾</u>）</li>
+<li style="list-style: none"><input type="checkbox"> hexo-pdf插件：pdf预览</li>
+<li style="list-style: none"><input type="checkbox"> 返回顶部 <code>2018年8月3日</code></li>
+<li style="list-style: none"><input type="checkbox"> 学习使用 F12 开发人员工具调试HTML 和 CSS</li>
+</ul>
+<p><strong>归档页</strong></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">&lt;!--&lt;%- list_posts(&#123;order: -1, amount: 1000&#125;) %&gt;--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 完全显示 --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">var</span> <span class="attr">last</span>; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">site.posts.sort</span>('<span class="attr">-date</span>')<span class="attr">.map</span>(<span class="attr">function</span>(<span class="attr">post</span>, <span class="attr">i</span>)&#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">var</span> <span class="attr">year</span> = <span class="string">post.date.year();</span> %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">last</span> != <span class="string">year)&#123;</span> %&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">last</span> != <span class="string">null)&#123;</span> %&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">last</span> = <span class="string">year;</span> %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(config.archive_dir + '/' + year) %&gt;"</span> <span class="attr">class</span>=<span class="string">"archive-year"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">%=</span> <span class="attr">year</span> %&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"archives"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">archive-post</span>', &#123;<span class="attr">post:</span> <span class="attr">post</span>, <span class="attr">even:</span> <span class="attr">i</span> % <span class="attr">2</span> == <span class="string">0,</span> <span class="attr">index:</span> <span class="attr">true</span>&#125;) %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">site.posts.length</span>)&#123; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<p><strong>标签页</strong></p>
+<p>标签云，加载效果不理想。<a href="http://www.netcan666.com/2015/12/15/Hexo%E4%B8%AA%E6%80%A7%E5%8C%96%E7%90%83%E5%BD%A2%E6%A0%87%E7%AD%BE%E4%BA%91/#7s8d6f87#7s8d6f87" target="_blank" rel="noopener">参考博客</a></p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">js</span>(['<span class="attr">js</span>/<span class="attr">tagcanvas.js</span>'])%&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tags"</span> <span class="attr">id</span>=<span class="string">"myTags"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">width</span>=<span class="string">"700px"</span> <span class="attr">height</span>=<span class="string">"400"</span> <span class="attr">id</span>=<span class="string">"my3DTags"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Anything in here will be replaced on browsers that support the canvas element<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tags"</span> <span class="attr">id</span>=<span class="string">"tags"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">tagcloud</span>(&#123;</span></span><br><span class="line"><span class="tag">    <span class="attr">min_font:</span> <span class="attr">16</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">max_font:</span> <span class="attr">35</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">amount:</span> <span class="attr">999</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">color:</span> <span class="attr">true</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">start_color:</span> '<span class="attr">black</span>',</span></span><br><span class="line"><span class="tag">    <span class="attr">end_color:</span> '<span class="attr">red</span>',</span></span><br><span class="line"><span class="tag">&#125;) %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">try</span> &#123;</span></span><br><span class="line"><span class="javascript">        TagCanvas.Start(<span class="string">'my3DTags'</span>,<span class="string">'tags'</span>,&#123;</span></span><br><span class="line"><span class="javascript">        textFont: <span class="string">'Georgia,Optima'</span>,</span></span><br><span class="line"><span class="javascript">        textColour: <span class="literal">null</span>,</span></span><br><span class="line"><span class="javascript">        outlineColour: <span class="string">'#ff00ff'</span>,</span></span><br><span class="line"><span class="javascript">        weight: <span class="literal">true</span>,</span></span><br><span class="line"><span class="javascript">        reverse: <span class="literal">true</span>,</span></span><br><span class="line"><span class="undefined">        depth: 0.8,</span></span><br><span class="line"><span class="undefined">        maxSpeed: 0.05,</span></span><br><span class="line"><span class="undefined">        bgRadius: 1,</span></span><br><span class="line"><span class="javascript">        freezeDecel: <span class="literal">true</span></span></span><br><span class="line"><span class="undefined">        &#125;);</span></span><br><span class="line"><span class="javascript">    &#125; <span class="keyword">catch</span>(e) &#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">// something went wrong, hide the canvas container</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'myTags'</span>).style.display = <span class="string">'none'</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<center><em>实现效果</em></center>
+
+<video id="video" controls preload="none"><br><br>​    <source id="mp4" src="https://1024-1253939655.cos.ap-beijing.myqcloud.com/hexo_poem/tag.mp4"><br><br>​     <p>Your user agent does not support the HTML5 Video element.</p><br><br></video>
+
+<p><strong>搜索页</strong></p>
+<p><a href="http://www.hahack.com/codes/local-search-engine-for-hexo/" target="_blank" rel="noopener">参考博文</a></p>
+<p><strong>返回顶部</strong></p>
+<p>三个步骤：添加ejs文件、添加js文件、相应位置引入（<a href="http://www.lanrentuku.com/gif/a/top.html" target="_blank" rel="noopener">返回顶部图标下载</a>）</p>
+<ul>
+<li>添加ejs文价</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--totop.ejs--&gt;</span></span><br><span class="line"># totop&#123;</span><br><span class="line">    position: fixed;</span><br><span class="line">    bottom: 50px;</span><br><span class="line">    right: 30px;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"totop"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span> <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"&lt;%- config.root %&gt;img/totop.png"</span>/&gt;</span> <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>添加js文件</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//totop.js</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> upperLimit = <span class="number">1000</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Our scroll link element</span></span><br><span class="line">    <span class="keyword">var</span> scrollElem = $(<span class="string">'#totop'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Scroll to top speed</span></span><br><span class="line">    <span class="keyword">var</span> scrollSpeed = <span class="number">500</span>;</span><br><span class="line">    scrollElem.hide();</span><br><span class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> scrollTop = $(<span class="built_in">document</span>).scrollTop();</span><br><span class="line">        <span class="keyword">if</span> ( scrollTop &gt; upperLimit ) &#123;</span><br><span class="line">            $(scrollElem).stop().fadeTo(<span class="number">300</span>, <span class="number">1</span>); </span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(scrollElem).stop().fadeTo(<span class="number">300</span>, <span class="number">0</span>); </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    $(scrollElem).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        $(<span class="string">'html, body'</span>).animate(&#123;<span class="attr">scrollTop</span>:<span class="number">0</span>&#125;, scrollSpeed); <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)(jQuery);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>相应位置引入</li>
+</ul>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_custom</span>/<span class="attr">totop</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"&lt;%- config.root %&gt;js/totop.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>layout.ejs文件中引入（其他类似）</p>
+<ul>
+<li>相关问题</li>
+</ul>
+<p>返回顶部的速度太慢，修改totop.js文件中的变量即可。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Our scroll link element</span></span><br><span class="line"><span class="comment">//&lt;div id="totop"&gt;</span></span><br><span class="line"><span class="comment">//获取锚点</span></span><br><span class="line"><span class="keyword">var</span> scrollElem = $(<span class="string">'#totop'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Scroll to top speed</span></span><br><span class="line"><span class="comment">//滚动速度，值越小越快</span></span><br><span class="line"><span class="keyword">var</span> scrollSpeed = <span class="number">500</span>;</span><br></pre></td></tr></table></figure>
+<p>更多实现方法，见于此<a href="https://www.jb51.net/article/91824.htm" target="_blank" rel="noopener">传送门</a></p>
+
+				</div>
+			</div>
+
+		</article>
+
+		<ul class="am-pagination">
+    
+    	<li class="am-pagination-prev">
+   		<a class="pull-left" href="/2018/07/31/That-boy/" title="That boy">
+      		&laquo;上一篇 
+		</a>
+		</li>
+	
+	
+		<li class="am-pagination-next">
+		<a class="pull-right" href="/2018/07/26/李白诗选/" title="李白诗选">
+			下一篇&raquo;
+		</a>
+		</li>
+	 
+ </ul>
+        
+
+			
+
+
+	</div> 
+</div>
+
+
+
+	</div>
+	<footer>
+	<div class="blog-text-center">
+		<div class="social">
+				
+				
+					<a href="http://github.com/" title="Github" target="_blank"><i class="fa fa-github"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="Weibo" target="_blank"><i class="fa fa-weibo"></i>&nbsp;</a>
+				
+				
+					<a href="http://github.com/" title="Email" target="_blank"><i class="fa fa-envelope-o"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="QQ" target="_blank"><i class="fa fa-qq"></i>&nbsp;</a>
+					
+				
+					<a href="http://github.com/" title="Twitter" target="_blank"><i class="fa fa-twitter"></i>&nbsp;</a>
+						
+				
+		</div>
+	</div>
+
+	<div  class="blog-text-center">
+		<div class="copyright">
+			
+				&copy; 2017 - 2018, content by songci. All Rights Reserved.			       	
+			
+		</div>
+	</div>
+
+	<div class="blog-text-center">
+		<div class="copyright">
+			<a href="http://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a> Theme <a href="https://github.com/Sariay/hexo-theme-Annie" title="Annie" target="_blank" rel="noopener">Annie</a> by Sariay.		
+		</div>
+	</div>
+</footer>
+
+
+
+
+
+
+	</main>
+
+	
+<script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+
+<script>window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')</script>
+
+<script src="/js/main.js"></script> 
+
+<style>
+	.motto {
+		color: #000000;
+		font-size: 20px;
+		margin: 60px 20px 0 20px;
+		line-height: 1.4;
+		font-family: 'Fang Song', 'Song', 'STSong', sans-serif;
+		text-align: center;
+	}
+</style>
+
+
+	<script src="/js/motto.js"></script>
+	<script>
+		$(".motto").html(getMingYanContent());
+	</script>	
+
+
+
+    <div class="popup search-popup local-search-popup">
+    <span class="popup-btn-close">
+      ESC
+    </span>
+    <div class="container">
+      <div class="col-md-8 col-md-offset-2">
+
+        <div class="local-search-header clearfix">
+            <span class="search-icon"></span>
+            <div class="local-search-input-wrapper">
+              <input autocomplete="off" placeholder="Search..." type="text" id="local-search-input">
+            </div>
+        </div>
+
+        <div id="local-search-result"></div>
+
+      </div>
+    </div>
+</div>
+
+<script src="/js/ziploader.js"></script>
+
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.json";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').fadeOut(300);
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $('.popup').fadeIn(300);
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // get search zip version
+    $.get('/searchVersion.txt?t=' + (+new Date()), function(res) {
+      if (localStorage.getItem('searchVersion') !== res) {
+        localStorage.setItem('searchVersion', res);
+        initSearchJson();
+      }
+    });
+
+    function initSearchJson () {
+      initLoad(['/search.zip'], {
+        loadOptions: {
+          success: function(obj) {
+            localStorage.setItem('searchJson', obj['search.json'])
+          },
+          error: function(e) {
+            return console.log(e)
+          }
+        },
+        returnOptions: {
+          'json': TYPE_TEXT
+        },
+        mimeOptions:{
+          'json':'application/json'
+        }
+      })
+    }
+
+    // search function;
+    var searchFunc = function(search_id, content_id) {
+      'use strict';
+
+      isfetched = true;
+      var datas = JSON.parse(localStorage.getItem('searchJson'));
+      console.log(search_id)
+      var input = document.getElementById(search_id);
+      var resultContent = document.getElementById(content_id);
+      var inputEventFunction = function() {
+        var searchText = input.value.trim().toLowerCase();
+        var keywords = searchText.split(/[\s\-]+/);
+        if (keywords.length > 1) {
+          keywords.push(searchText);
+        }
+        var resultItems = [];
+        if (searchText.length > 0) {
+          // perform local searching
+          datas.forEach(function(data) {
+            var isMatch = false;
+            var hitCount = 0;
+            var searchTextCount = 0;
+            var title = data.title ? data.title.trim() : '';
+            var titleInLowerCase = title.toLowerCase();
+            var content = data.content ? data.content.trim().replace(/<[^>]+>/g,"") : '';
+            var contentInLowerCase = content.toLowerCase();
+            var articleUrl = decodeURIComponent(data.url);
+            var indexOfTitle = [];
+            var indexOfContent = [];
+            // only match articles with not empty titles
+            keywords.forEach(function(keyword) {
+              function getIndexByWord(word, text, caseSensitive) {
+                var wordLen = word.length;
+                if (wordLen === 0) {
+                  return [];
+                }
+                var startPosition = 0, position = [], index = [];
+                if (!caseSensitive) {
+                  text = text.toLowerCase();
+                  word = word.toLowerCase();
+                }
+                while ((position = text.indexOf(word, startPosition)) > -1) {
+                  index.push({position: position, word: word});
+                  startPosition = position + wordLen;
+                }
+                return index;
+              }
+
+              indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+              indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+            });
+            if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+              isMatch = true;
+              hitCount = indexOfTitle.length + indexOfContent.length;
+            }
+
+            // show search results
+
+            if (isMatch) {
+              // sort index by position of keyword
+
+              [indexOfTitle, indexOfContent].forEach(function (index) {
+                index.sort(function (itemLeft, itemRight) {
+                  if (itemRight.position !== itemLeft.position) {
+                    return itemRight.position - itemLeft.position;
+                  } else {
+                    return itemLeft.word.length - itemRight.word.length;
+                  }
+                });
+              });
+
+              // merge hits into slices
+
+              function mergeIntoSlice(text, start, end, index) {
+                var item = index[index.length - 1];
+                var position = item.position;
+                var word = item.word;
+                var hits = [];
+                var searchTextCountInSlice = 0;
+                while (position + word.length <= end && index.length != 0) {
+                  if (word === searchText) {
+                    searchTextCountInSlice++;
+                  }
+                  hits.push({position: position, length: word.length});
+                  var wordEnd = position + word.length;
+
+                  // move to next position of hit
+
+                  index.pop();
+                  while (index.length != 0) {
+                    item = index[index.length - 1];
+                    position = item.position;
+                    word = item.word;
+                    if (wordEnd > position) {
+                      index.pop();
+                    } else {
+                      break;
+                    }
+                  }
+                }
+                searchTextCount += searchTextCountInSlice;
+                return {
+                  hits: hits,
+                  start: start,
+                  end: end,
+                  searchTextCount: searchTextCountInSlice
+                };
+              }
+
+              var slicesOfTitle = [];
+              if (indexOfTitle.length != 0) {
+                slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+              }
+
+              var slicesOfContent = [];
+              while (indexOfContent.length != 0) {
+                var item = indexOfContent[indexOfContent.length - 1];
+                var position = item.position;
+                var word = item.word;
+                // cut out 100 characters
+                var start = position - 20;
+                var end = position + 80;
+                if(start < 0){
+                  start = 0;
+                }
+                if (end < position + word.length) {
+                  end = position + word.length;
+                }
+                if(end > content.length){
+                  end = content.length;
+                }
+                slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+              }
+
+              // sort slices in content by search text's count and hits' count
+
+              slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                  return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                  return sliceRight.hits.length - sliceLeft.hits.length;
+                } else {
+                  return sliceLeft.start - sliceRight.start;
+                }
+              });
+
+              // select top N slices in content
+
+              var upperBound = parseInt('2');
+              if (upperBound >= 0) {
+                slicesOfContent = slicesOfContent.slice(0, upperBound);
+              }
+
+              // highlight title and content
+
+              function highlightKeyword(text, slice) {
+                var result = '';
+                var prevEnd = slice.start;
+                slice.hits.forEach(function (hit) {
+                  result += text.substring(prevEnd, hit.position);
+                  var end = hit.position + hit.length;
+                  result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                  prevEnd = end;
+                });
+                result += text.substring(prevEnd, slice.end);
+                return result;
+              }
+
+              var resultItem = '';
+
+              if (slicesOfTitle.length != 0) {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+              } else {
+                resultItem += "<li><a target='_blank' href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+              }
+
+              slicesOfContent.forEach(function (slice) {
+                resultItem +=  "<p class=\"search-result\">" + highlightKeyword(content, slice) + "...</p>";
+              });
+
+              resultItem += "</li>";
+              resultItems.push({
+                item: resultItem,
+                searchTextCount: searchTextCount,
+                hitCount: hitCount,
+                id: resultItems.length
+              });
+            }
+          })
+        };
+        if (keywords.length === 1 && keywords[0] === "") {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+        } else if (resultItems.length === 0) {
+          resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /> no result </div>'
+        } else {
+          resultItems.sort(function (resultLeft, resultRight) {
+            if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+              return resultRight.searchTextCount - resultLeft.searchTextCount;
+            } else if (resultLeft.hitCount !== resultRight.hitCount) {
+              return resultRight.hitCount - resultLeft.hitCount;
+            } else {
+              return resultRight.id - resultLeft.id;
+            }
+          });
+          var searchResultList = '<ul class=\"search-result-list\">';
+          resultItems.forEach(function (result) {
+            searchResultList += result.item;
+          })
+          searchResultList += "</ul>";
+          resultContent.innerHTML = searchResultList;
+        }
+      }
+
+      if ('auto' === 'auto') {
+        input.addEventListener('input', inputEventFunction);
+      } else {
+        $('.search-icon').click(inputEventFunction);
+        input.addEventListener('keypress', function (event) {
+          if (event.keyCode === 13) {
+            inputEventFunction();
+          }
+        });
+      }
+
+      // remove loading animation
+      $('body').css('overflow', '');
+
+      proceedsearch();
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        $('.sb-close').click();
+        searchFunc('local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+
+</body>
+</html>
