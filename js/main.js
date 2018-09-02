@@ -11,11 +11,11 @@ jQuery(document).ready(function($){
 	/* Preloader */
 	var Annie_Preloader = function() {
 		$(window).on("load", function() { 
-			// fade in the loading animation	
-			$("#status").fadeIn("slow");
+			// fade out the loading animation
+			$("#status").fadeOut(); 
 
 			//fade out the white DIV that covers the website
-			$("#preloader").delay(2000).fadeOut("slow"); 
+			$("#preloader").delay(400).fadeOut("slow"); 
 		});	
 	}; 
 
