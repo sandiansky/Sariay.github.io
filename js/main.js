@@ -94,7 +94,7 @@ jQuery(document).ready(function($){
 	(function Annie_Init() {
 		Annie_Preloader();
 		Annie_Nav();
-		Annie_Random();
+		//Annie_Random();
 		Annie_ToTop();
 		Annie_Toc();
 	})();
