@@ -1,7 +1,10 @@
 <!--There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!-->
-<!DOCTYPE html>
-<html>
-	
+
+
+
+	<!DOCTYPE html>
+	<html>
+		
 
 <head>
 	<title>hexo-theme-Annie</title>
@@ -13,7 +16,9 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
    	<!-- css -->
-	<link rel="stylesheet" href="/css/style.css">		
+	<link rel="stylesheet" href="/css/style.css">	
+	<!-- code -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">	
 	<!-- favicon -->
 	<link href="/img/favicon.ico" rel="Shortcut Icon" type="image/ico">
 	<!-- font-awesome -->
@@ -22,8 +27,8 @@
 
 
 
-<body>	
-	<!--Preloader-->
+	<body>	
+		<!--Preloader-->
 <div id="preloader">
 	<div id="status">
 		<img alt="preloader" src="/img/logo.png">
@@ -89,9 +94,10 @@
 </div>
 
 
-	<main>
-	<div class="page-container">
-	<!-- content srart -->
+		<main>
+		<div class="page-container">
+		
+    <!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
 	<div class="am-u-md-8 am-u-sm-12">
 
@@ -251,36 +257,169 @@
 <ul>
 <li><strong>进度条使用</strong></li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&lt;<span class="selector-tag">style</span>&gt;</span><br><span class="line">	<span class="selector-id">#loading</span> &#123;</span><br><span class="line">		<span class="attribute">background-color</span>: red;</span><br><span class="line">		<span class="attribute">height</span>: <span class="number">2px</span>;</span><br><span class="line">		<span class="attribute">width</span>: <span class="number">0px</span>;</span><br><span class="line">		<span class="attribute">position</span>: fixed;</span><br><span class="line">		<span class="attribute">top</span>: <span class="number">0px</span></span><br><span class="line">	&#125;</span><br><span class="line">&lt;/style&gt;</span><br><span class="line">//引入样式</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"&lt;%- config.root %&gt;js/jquery-2.0.2.min.js"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script type=<span class="string">"text/javascript"</span> src=<span class="string">"&lt;%- config.root %&gt;js/loading_bar.js"</span>&gt;&lt;/script&gt;</span><br><span class="line"><span class="comment">//引入脚本</span></span><br></pre></td></tr></table></figure>
+<pre><code class="css">&lt;style&gt;
+    #loading {
+        background-color: red;
+        height: 2px;
+        width: 0px;
+        position: fixed;
+        top: 0px
+    }
+&lt;/style&gt;
+//引入样式
+</code></pre>
+<pre><code class="js">&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;%- config.root %&gt;js/jquery-2.0.2.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot; src=&quot;&lt;%- config.root %&gt;js/loading_bar.js&quot;&gt;&lt;/script&gt;
+//引入脚本
+</code></pre>
 <ul>
 <li><strong>图片预览使用</strong></li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*图片插件样式*/</span></span><br><span class="line">@<span class="keyword">import</span> <span class="string">"zoomify.min.css"</span>;</span><br><span class="line">//引入样式</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">"http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"</span> type=<span class="string">"text/javascript"</span>&gt;&lt;/script&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">	<span class="built_in">window</span>.jQuery || <span class="built_in">document</span>.write(<span class="string">'&lt;script src="&lt;%- config.root %&gt;js/jquery-2.1.1.min.js"&gt;&lt;\/script&gt;'</span>)</span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br><span class="line"><span class="regexp">&lt;script src="&lt;%- config.root %&gt;js/</span>zoomify.min.js<span class="string">"&gt;&lt;/script&gt;</span></span><br><span class="line"><span class="string">&lt;script type="</span>text/javascript<span class="string">"&gt;</span></span><br><span class="line"><span class="string">	$('.content img').zoomify();</span></span><br><span class="line"><span class="string">&lt;/script&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="css">/*图片插件样式*/
+@import &quot;zoomify.min.css&quot;;
+//引入样式
+</code></pre>
+<pre><code class="js">&lt;script src=&quot;http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js&quot; type=&quot;text/javascript&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+    window.jQuery || document.write(&#39;&lt;script src=&quot;&lt;%- config.root %&gt;js/jquery-2.1.1.min.js&quot;&gt;&lt;\/script&gt;&#39;)
+&lt;/script&gt;
+&lt;script src=&quot;&lt;%- config.root %&gt;js/zoomify.min.js&quot;&gt;&lt;/script&gt;
+&lt;script type=&quot;text/javascript&quot;&gt;
+    $(&#39;.content img&#39;).zoomify();
+&lt;/script&gt;
+</code></pre>
 <ul>
 <li><strong>js静态切换图片</strong>（刷新一次换一张）</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">"text/javascript"</span>&gt;</span><br><span class="line">    <span class="comment">//数组的长度=图像的数量</span></span><br><span class="line">    <span class="keyword">var</span> bodyBgs = [];</span><br><span class="line">    bodyBgs[<span class="number">0</span>] = <span class="string">"img/01.jpg"</span>;</span><br><span class="line">    bodyBgs[<span class="number">1</span>] = <span class="string">"img/02.jpg"</span>;</span><br><span class="line">    bodyBgs[<span class="number">2</span>] = <span class="string">"img/03.jpg"</span>;</span><br><span class="line">    bodyBgs[<span class="number">3</span>] = <span class="string">"img/04.jpg"</span>;</span><br><span class="line">    bodyBgs[<span class="number">4</span>] = <span class="string">"img/05.jpg"</span>;</span><br><span class="line">	</span><br><span class="line">	<span class="keyword">var</span> randomBgIndex = <span class="built_in">Math</span>.round( <span class="built_in">Math</span>.random() * <span class="number">4</span> );</span><br><span class="line"></span><br><span class="line">    <span class="comment">//输出随机的背景图</span></span><br><span class="line">    <span class="built_in">document</span>.write(<span class="string">'&lt;style&gt;body&#123;background:url('</span> + bodyBgs[randomBgIndex] + <span class="string">')&#125;&lt;/style&gt;'</span>);</span><br><span class="line"></span><br><span class="line"> </span><br><span class="line">&lt;<span class="regexp">/script&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="js">&lt;script type=&quot;text/javascript&quot;&gt;
+    //数组的长度=图像的数量
+    var bodyBgs = [];
+    bodyBgs[0] = &quot;img/01.jpg&quot;;
+    bodyBgs[1] = &quot;img/02.jpg&quot;;
+    bodyBgs[2] = &quot;img/03.jpg&quot;;
+    bodyBgs[3] = &quot;img/04.jpg&quot;;
+    bodyBgs[4] = &quot;img/05.jpg&quot;;
+
+    var randomBgIndex = Math.round( Math.random() * 4 );
+
+    //输出随机的背景图
+    document.write(&#39;&lt;style&gt;body{background:url(&#39; + bodyBgs[randomBgIndex] + &#39;)}&lt;/style&gt;&#39;);
+
+
+&lt;/script&gt;
+</code></pre>
 <ul>
 <li><strong>头部背景设置</strong></li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;% if(theme.background_image.enable) &#123; %&gt;</span><br><span class="line">	&lt;header style=&quot;background-image: url( &lt;%- url_for(theme.background_image.url) %&gt; );&quot;&gt;	</span><br><span class="line">&lt;% &#125; else &#123; %&gt;</span><br><span class="line">	&lt;header style=&quot;background-image: url(https://source.unsplash.com/collection/954550/1920x1080);&quot;&gt;</span><br><span class="line">&lt;% &#125; %&gt;</span><br></pre></td></tr></table></figure>
-<ul>
+<pre><code>&lt;% if(theme.background_image.enable) { %&gt;
+    &lt;header style=&quot;background-image: url( &lt;%- url_for(theme.background_image.url) %&gt; );&quot;&gt;    
+&lt;% } else { %&gt;
+    &lt;header style=&quot;background-image: url(https://source.unsplash.com/collection/954550/1920x1080);&quot;&gt;
+&lt;% } %&gt;
+</code></pre><ul>
 <li><strong>站点内容预加载</strong></li>
 </ul>
 <p><u>确保网页的内容加载完成，保持页面样式</u></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--PRELOADER--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"preloader"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"status"</span>&gt;</span></span><br><span class="line">		<span class="tag">&lt;<span class="name">img</span> <span class="attr">alt</span>=<span class="string">"logo"</span> <span class="attr">src</span>=<span class="string">"&lt;%- config.root %&gt;img/logo-big.png"</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--/.PRELOADER END--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">header</span>&gt;</span></span><br><span class="line">...</span><br><span class="line"><span class="tag">&lt;/<span class="name">header</span>&gt;</span></span><br><span class="line"></span><br><span class="line">//在header.ejs之前引入（或相应位置）</span><br></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Preloader*/</span></span><br><span class="line"><span class="selector-id">#preloader</span> &#123;</span><br><span class="line">  <span class="attribute">position</span>: fixed;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">right</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">bottom</span>: <span class="number">0</span>;</span><br><span class="line">  <span class="attribute">background-color</span>: <span class="number">#fff</span>;</span><br><span class="line">  <span class="attribute">z-index</span>: <span class="number">999999</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#status</span> &#123;</span><br><span class="line">  <span class="attribute">width</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">200px</span>;</span><br><span class="line">  <span class="attribute">position</span>: absolute;</span><br><span class="line">  <span class="attribute">left</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">top</span>: <span class="number">50%</span>;</span><br><span class="line">  <span class="attribute">background-image</span>: <span class="built_in">url</span>(/img/loader.gif);</span><br><span class="line">  <span class="attribute">background-repeat</span>: no-repeat;</span><br><span class="line">  <span class="attribute">background-position</span>: center center;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">margin</span>: -<span class="number">40px</span> <span class="number">0</span> <span class="number">0</span> -<span class="number">100px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-id">#status</span> <span class="selector-tag">img</span> &#123;</span><br><span class="line">  <span class="attribute">text-align</span>: center;</span><br><span class="line">  <span class="attribute">margin-top</span>: -<span class="number">80px</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*Preloader end*/</span></span><br><span class="line"></span><br><span class="line">//添加样式</span><br></pre></td></tr></table></figure>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">jQuery(<span class="built_in">document</span>).ready(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>)</span>&#123;</span><br><span class="line"><span class="meta"> 	"use strict"</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">/*preloader start*/</span></span><br><span class="line">    <span class="comment">// makes sure the whole site is loaded</span></span><br><span class="line"> 	$(<span class="built_in">window</span>).on(<span class="string">"load"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;  </span><br><span class="line">    	$(<span class="string">"#status"</span>).fadeOut(); </span><br><span class="line">        <span class="comment">// will first fade out the loading animation</span></span><br><span class="line">   		$(<span class="string">"#preloader"</span>).delay(<span class="number">450</span>).fadeOut(<span class="string">"slow"</span>); </span><br><span class="line">        <span class="comment">// will fade out the white DIV that covers the website.</span></span><br><span class="line"> 	&#125;);	</span><br><span class="line">	<span class="comment">/*preloader end*/</span></span><br><span class="line">    </span><br><span class="line">	<span class="comment">/*nav start*/</span></span><br><span class="line">    	...</span><br><span class="line">	<span class="function"><span class="keyword">function</span> <span class="title">checkMenu</span>(<span class="params"></span>) </span>&#123; ... &#125;</span><br><span class="line">    <span class="comment">/*nav end*/</span></span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line"><span class="comment">//写入脚本:'preloader'部分</span></span><br></pre></td></tr></table></figure>
+<pre><code class="html">&lt;!--PRELOADER--&gt;
+&lt;div id=&quot;preloader&quot;&gt;
+    &lt;div id=&quot;status&quot;&gt;
+        &lt;img alt=&quot;logo&quot; src=&quot;&lt;%- config.root %&gt;img/logo-big.png&quot;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!--/.PRELOADER END--&gt;
+
+&lt;header&gt;
+...
+&lt;/header&gt;
+
+//在header.ejs之前引入（或相应位置）
+</code></pre>
+<pre><code class="css">/* Preloader*/
+#preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  z-index: 999999;
+}
+#status {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background-image: url(/img/loader.gif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  text-align: center;
+  margin: -40px 0 0 -100px;
+}
+#status img {
+  text-align: center;
+  margin-top: -80px;
+}
+/*Preloader end*/
+
+//添加样式
+</code></pre>
+<pre><code class="js">jQuery(document).ready(function($){
+     &quot;use strict&quot;;
+
+    /*preloader start*/
+    // makes sure the whole site is loaded
+     $(window).on(&quot;load&quot;, function() {  
+        $(&quot;#status&quot;).fadeOut(); 
+        // will first fade out the loading animation
+           $(&quot;#preloader&quot;).delay(450).fadeOut(&quot;slow&quot;); 
+        // will fade out the white DIV that covers the website.
+     });    
+    /*preloader end*/
+
+    /*nav start*/
+        ...
+    function checkMenu() { ... }
+    /*nav end*/
+});
+
+//写入脚本:&#39;preloader&#39;部分
+</code></pre>
 <ul>
 <li><strong>提交本地代码到远程仓库</strong>（git——&gt;github）</li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin https://github.com/Sariay/hexo-theme-Annie.git</span><br><span class="line">//只需关联一次即可</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">git remote add origin https://github.com/Sariay/hexo-theme-Annie.git
+//只需关联一次即可
+</code></pre>
 <p><u>提交单个文件</u></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> hexo-theme-Annie</span><br><span class="line">$ touch README.md</span><br><span class="line">$ git init</span><br><span class="line">//添加README.md、初始化仓库</span><br><span class="line"></span><br><span class="line">$ git add README.md</span><br><span class="line">$ git commit -m <span class="string">"first commit"</span> //提交说明</span><br><span class="line">//提交README.md文件到“本地版本库”</span><br><span class="line"></span><br><span class="line">git remote add origin https://github.com/Sariay/hexo-theme-Annie.git</span><br><span class="line">git push origin master</span><br><span class="line">//关联仓库、提交本地代码到远程仓库</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ cd hexo-theme-Annie
+$ touch README.md
+$ git init
+//添加README.md、初始化仓库
+
+$ git add README.md
+$ git commit -m &quot;first commit&quot; //提交说明
+//提交README.md文件到“本地版本库”
+
+git remote add origin https://github.com/Sariay/hexo-theme-Annie.git
+git push origin master
+//关联仓库、提交本地代码到远程仓库
+</code></pre>
 <p><u>提交全部文件</u></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">cd</span> hexo-theme-Annie</span><br><span class="line">$ touch README.md</span><br><span class="line">$ git init</span><br><span class="line">//添加README.md、初始化仓库</span><br><span class="line"></span><br><span class="line">$ git add .	</span><br><span class="line">//提交全部文件到暂存区</span><br><span class="line">$ git commit -m <span class="string">"xxx commit"</span> //提交说明</span><br><span class="line">//提交全部文件到“本地版本库”</span><br><span class="line"></span><br><span class="line">git remote add origin https://github.com/Sariay/hexo-theme-Annie.git</span><br><span class="line">git push origin master</span><br><span class="line">//关联仓库、提交本地代码到远程仓库</span><br></pre></td></tr></table></figure>
+<pre><code class="bash">$ cd hexo-theme-Annie
+$ touch README.md
+$ git init
+//添加README.md、初始化仓库
+
+$ git add .    
+//提交全部文件到暂存区
+$ git commit -m &quot;xxx commit&quot; //提交说明
+//提交全部文件到“本地版本库”
+
+git remote add origin https://github.com/Sariay/hexo-theme-Annie.git
+git push origin master
+//关联仓库、提交本地代码到远程仓库
+</code></pre>
 <p><a href="https://blog.csdn.net/gaoying_blogs/article/details/53337112" target="_blank" rel="noopener">【Git】git将本地代码提交到远程仓库</a></p>
 <p><a href="http://stormzhang.com/github/2016/06/04/learn-github-from-zero4/" target="_blank" rel="noopener">从0开始学习 GitHub 系列之「向GitHub 提交代码」</a> </p>
 <ul>
@@ -326,10 +465,59 @@
 	</div> 
 </div>
 
+<!-- code highlight 测试版fix me-->
+<style>
+pre {
+  background: inherit;
+  border: 1px solid #ccc;
+  overflow-x: auto;
+  padding: .5em;
+  position: relative;
+  margin: 0 0 0.8em 0;
+  overflow-y: hidden
+}
+
+pre code {
+  margin: -0.5em !important;
+  padding: 0.5em !important;
+  overflow-y: auto;
+  overflow-x: auto;
+  display: block
+}
+
+code.has-numbering {
+  margin-left: 1.7em !important;
+  word-wrap: normal;
+  word-break: keep-all;
+  white-space: pre
+}
+
+.pre-numbering {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.2em;
+  height: 100%;
+  padding: 0.5em 0.2em 0.5em 0;
+  border-right: 1px solid #C3CCD0;
+  background-color: #EEE;
+  text-align: right;
+  color: #AAA;
+  list-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+</style>
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+
+<!-- css爬取自网页 -->
+<!-- code highlight 测试版fix me-->
 
 
-	</div>
-	<footer>
+		</div>
+		<footer>
 	<div class="blog-text-center">
 		<div class="social">
 				
@@ -372,9 +560,10 @@
 
 
 
-	</main>
+		</main>
 
-	
+		
+
 <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 
 <script>window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')</script>
@@ -738,5 +927,11 @@
 
 
 
-</body>
-</html>
+<script src="/js/code.js"></script>
+
+
+	</body>
+	</html>
+
+
+

@@ -77,7 +77,7 @@ jQuery(document).ready(function($){
 		var bg = 'url(https://annie-header-bg-1253939655.cos.ap-beijing.myqcloud.com/' + random_bg + '.jpg)';
 		$("header").css("background-image", bg);
 	}
-   
+
 	/* ToTop */
 	var Annie_ToTop = function() {
 		/* your code */

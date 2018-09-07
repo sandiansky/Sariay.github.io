@@ -1,7 +1,10 @@
 <!--There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!-->
-<!DOCTYPE html>
-<html>
-	
+
+
+
+	<!DOCTYPE html>
+	<html>
+		
 
 <head>
 	<title>博客功能扩展</title>
@@ -13,7 +16,9 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
    	<!-- css -->
-	<link rel="stylesheet" href="/css/style.css">		
+	<link rel="stylesheet" href="/css/style.css">	
+	<!-- code -->
+	<link rel="stylesheet" href="//cdn.bootcss.com/highlight.js/9.2.0/styles/github.min.css">	
 	<!-- favicon -->
 	<link href="/img/favicon.ico" rel="Shortcut Icon" type="image/ico">
 	<!-- font-awesome -->
@@ -22,8 +27,8 @@
 
 
 
-<body>	
-	<!--Preloader-->
+	<body>	
+		<!--Preloader-->
 <div id="preloader">
 	<div id="status">
 		<img alt="preloader" src="/img/logo.png">
@@ -89,9 +94,10 @@
 </div>
 
 
-	<main>
-	<div class="page-container">
-	<!-- content srart -->
+		<main>
+		<div class="page-container">
+		
+    <!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
 	<div class="am-u-md-8 am-u-sm-12">
 
@@ -151,10 +157,79 @@
 <li style="list-style: none"><input type="checkbox"> 学习使用 F12 开发人员工具调试HTML 和 CSS</li>
 </ul>
 <p><strong>归档页</strong></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"> <span class="comment">&lt;!--&lt;%- list_posts(&#123;order: -1, amount: 1000&#125;) %&gt;--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 完全显示 --&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">var</span> <span class="attr">last</span>; %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">site.posts.sort</span>('<span class="attr">-date</span>')<span class="attr">.map</span>(<span class="attr">function</span>(<span class="attr">post</span>, <span class="attr">i</span>)&#123; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">var</span> <span class="attr">year</span> = <span class="string">post.date.year();</span> %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">last</span> != <span class="string">year)&#123;</span> %&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">last</span> != <span class="string">null)&#123;</span> %&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">%</span> <span class="attr">last</span> = <span class="string">year;</span> %&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">section</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"&lt;%- url_for(config.archive_dir + '/' + year) %&gt;"</span> <span class="attr">class</span>=<span class="string">"archive-year"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">%=</span> <span class="attr">year</span> %&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"archives"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_partial</span>/<span class="attr">archive-post</span>', &#123;<span class="attr">post:</span> <span class="attr">post</span>, <span class="attr">even:</span> <span class="attr">i</span> % <span class="attr">2</span> == <span class="string">0,</span> <span class="attr">index:</span> <span class="attr">true</span>&#125;) %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125;) %&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> <span class="attr">if</span> (<span class="attr">site.posts.length</span>)&#123; %&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">section</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%</span> &#125; %&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="html"> &lt;!--&lt;%- list_posts({order: -1, amount: 1000}) %&gt;--&gt;
+
+&lt;!-- 完全显示 --&gt;
+
+&lt;% var last; %&gt;
+&lt;% site.posts.sort(&#39;-date&#39;).map(function(post, i){ %&gt;
+    &lt;% var year = post.date.year(); %&gt;
+    &lt;% if (last != year){ %&gt;
+
+        &lt;% if (last != null){ %&gt;
+            &lt;/div&gt;&lt;/section&gt;
+        &lt;% } %&gt;
+
+        &lt;% last = year; %&gt;
+        &lt;section&gt;
+        &lt;div&gt;
+            &lt;a href=&quot;&lt;%- url_for(config.archive_dir + &#39;/&#39; + year) %&gt;&quot; class=&quot;archive-year&quot;&gt;
+                &lt;%= year %&gt;
+            &lt;/a&gt;
+        &lt;/div&gt;
+        &lt;div class=&quot;archives&quot;&gt;
+    &lt;% } %&gt;
+    &lt;%- partial(&#39;_partial/archive-post&#39;, {post: post, even: i % 2 == 0, index: true}) %&gt;
+&lt;% }) %&gt;
+
+&lt;% if (site.posts.length){ %&gt;
+        &lt;/div&gt;&lt;/section&gt;
+&lt;% } %&gt;
+</code></pre>
 <p><strong>标签页</strong></p>
 <p>标签云，加载效果不理想。<a href="http://www.netcan666.com/2015/12/15/Hexo%E4%B8%AA%E6%80%A7%E5%8C%96%E7%90%83%E5%BD%A2%E6%A0%87%E7%AD%BE%E4%BA%91/#7s8d6f87#7s8d6f87" target="_blank" rel="noopener">参考博客</a></p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">js</span>(['<span class="attr">js</span>/<span class="attr">tagcanvas.js</span>'])%&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tags"</span> <span class="attr">id</span>=<span class="string">"myTags"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">canvas</span> <span class="attr">width</span>=<span class="string">"700px"</span> <span class="attr">height</span>=<span class="string">"400"</span> <span class="attr">id</span>=<span class="string">"my3DTags"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">p</span>&gt;</span>Anything in here will be replaced on browsers that support the canvas element<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">canvas</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"tags"</span> <span class="attr">id</span>=<span class="string">"tags"</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">tagcloud</span>(&#123;</span></span><br><span class="line"><span class="tag">    <span class="attr">min_font:</span> <span class="attr">16</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">max_font:</span> <span class="attr">35</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">amount:</span> <span class="attr">999</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">color:</span> <span class="attr">true</span>,</span></span><br><span class="line"><span class="tag">    <span class="attr">start_color:</span> '<span class="attr">black</span>',</span></span><br><span class="line"><span class="tag">    <span class="attr">end_color:</span> '<span class="attr">red</span>',</span></span><br><span class="line"><span class="tag">&#125;) %&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">ul</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/javascript"</span>&gt;</span><span class="undefined"></span></span><br><span class="line"><span class="javascript">    <span class="built_in">window</span>.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span></span><br><span class="line"><span class="javascript">    <span class="keyword">try</span> &#123;</span></span><br><span class="line"><span class="javascript">        TagCanvas.Start(<span class="string">'my3DTags'</span>,<span class="string">'tags'</span>,&#123;</span></span><br><span class="line"><span class="javascript">        textFont: <span class="string">'Georgia,Optima'</span>,</span></span><br><span class="line"><span class="javascript">        textColour: <span class="literal">null</span>,</span></span><br><span class="line"><span class="javascript">        outlineColour: <span class="string">'#ff00ff'</span>,</span></span><br><span class="line"><span class="javascript">        weight: <span class="literal">true</span>,</span></span><br><span class="line"><span class="javascript">        reverse: <span class="literal">true</span>,</span></span><br><span class="line"><span class="undefined">        depth: 0.8,</span></span><br><span class="line"><span class="undefined">        maxSpeed: 0.05,</span></span><br><span class="line"><span class="undefined">        bgRadius: 1,</span></span><br><span class="line"><span class="javascript">        freezeDecel: <span class="literal">true</span></span></span><br><span class="line"><span class="undefined">        &#125;);</span></span><br><span class="line"><span class="javascript">    &#125; <span class="keyword">catch</span>(e) &#123;</span></span><br><span class="line"><span class="javascript">        <span class="comment">// something went wrong, hide the canvas container</span></span></span><br><span class="line"><span class="javascript">        <span class="built_in">document</span>.getElementById(<span class="string">'myTags'</span>).style.display = <span class="string">'none'</span>;</span></span><br><span class="line"><span class="undefined">    &#125;</span></span><br><span class="line"><span class="undefined">    &#125;;</span></span><br><span class="line"><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="html">&lt;%- js([&#39;js/tagcanvas.js&#39;])%&gt;
+
+&lt;div class=&quot;tags&quot; id=&quot;myTags&quot;&gt;
+    &lt;canvas width=&quot;700px&quot; height=&quot;400&quot; id=&quot;my3DTags&quot;&gt;
+        &lt;p&gt;Anything in here will be replaced on browsers that support the canvas element&lt;/p&gt;
+    &lt;/canvas&gt;
+&lt;/div&gt;
+
+&lt;div class=&quot;tags&quot; id=&quot;tags&quot;&gt;
+&lt;ul&gt;
+&lt;%- tagcloud({
+    min_font: 16,
+    max_font: 35,
+    amount: 999,
+    color: true,
+    start_color: &#39;black&#39;,
+    end_color: &#39;red&#39;,
+}) %&gt;
+&lt;/ul&gt;
+&lt;/div&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+    window.onload = function() {
+    try {
+        TagCanvas.Start(&#39;my3DTags&#39;,&#39;tags&#39;,{
+        textFont: &#39;Georgia,Optima&#39;,
+        textColour: null,
+        outlineColour: &#39;#ff00ff&#39;,
+        weight: true,
+        reverse: true,
+        depth: 0.8,
+        maxSpeed: 0.05,
+        bgRadius: 1,
+        freezeDecel: true
+        });
+    } catch(e) {
+        // something went wrong, hide the canvas container
+        document.getElementById(&#39;myTags&#39;).style.display = &#39;none&#39;;
+    }
+    };
+&lt;/script&gt;
+</code></pre>
 <center><em>实现效果</em></center>
 
 <video id="video" controls preload="none"><br><br>​    <source id="mp4" src="https://1024-1253939655.cos.ap-beijing.myqcloud.com/hexo_poem/tag.mp4"><br><br>​     <p>Your user agent does not support the HTML5 Video element.</p><br><br></video>
@@ -166,21 +241,65 @@
 <ul>
 <li>添加ejs文价</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--totop.ejs--&gt;</span></span><br><span class="line"># totop&#123;</span><br><span class="line">    position: fixed;</span><br><span class="line">    bottom: 50px;</span><br><span class="line">    right: 30px;</span><br><span class="line">    cursor: pointer;</span><br><span class="line">&#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"totop"</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">"javascript:;"</span>&gt;</span> <span class="tag">&lt;<span class="name">img</span> <span class="attr">src</span>=<span class="string">"&lt;%- config.root %&gt;img/totop.png"</span>/&gt;</span> <span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="html">&lt;!--totop.ejs--&gt;
+# totop{
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    cursor: pointer;
+}
+&lt;/style&gt;
+
+&lt;div id=&quot;totop&quot;&gt;
+  &lt;a href=&quot;javascript:;&quot;&gt; &lt;img src=&quot;&lt;%- config.root %&gt;img/totop.png&quot;/&gt; &lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
 <ul>
 <li>添加js文件</li>
 </ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//totop.js</span></span><br><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">$</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> upperLimit = <span class="number">1000</span>;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Our scroll link element</span></span><br><span class="line">    <span class="keyword">var</span> scrollElem = $(<span class="string">'#totop'</span>);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// Scroll to top speed</span></span><br><span class="line">    <span class="keyword">var</span> scrollSpeed = <span class="number">500</span>;</span><br><span class="line">    scrollElem.hide();</span><br><span class="line">    $(<span class="built_in">window</span>).scroll(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> scrollTop = $(<span class="built_in">document</span>).scrollTop();</span><br><span class="line">        <span class="keyword">if</span> ( scrollTop &gt; upperLimit ) &#123;</span><br><span class="line">            $(scrollElem).stop().fadeTo(<span class="number">300</span>, <span class="number">1</span>); </span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            $(scrollElem).stop().fadeTo(<span class="number">300</span>, <span class="number">0</span>); </span><br><span class="line">        &#125;</span><br><span class="line">    &#125;);</span><br><span class="line">    $(scrollElem).click(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        $(<span class="string">'html, body'</span>).animate(&#123;<span class="attr">scrollTop</span>:<span class="number">0</span>&#125;, scrollSpeed); <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    &#125;);</span><br><span class="line">&#125;)(jQuery);</span><br></pre></td></tr></table></figure>
+<pre><code class="js">//totop.js
+(function($) {
+    var upperLimit = 1000;
+
+    // Our scroll link element
+    var scrollElem = $(&#39;#totop&#39;);
+
+    // Scroll to top speed
+    var scrollSpeed = 500;
+    scrollElem.hide();
+    $(window).scroll(function () {
+        var scrollTop = $(document).scrollTop();
+        if ( scrollTop &gt; upperLimit ) {
+            $(scrollElem).stop().fadeTo(300, 1); 
+        }else{
+            $(scrollElem).stop().fadeTo(300, 0); 
+        }
+    });
+    $(scrollElem).click(function(){
+        $(&#39;html, body&#39;).animate({scrollTop:0}, scrollSpeed); return false;
+    });
+})(jQuery);
+</code></pre>
 <ul>
 <li>相应位置引入</li>
 </ul>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%-</span> <span class="attr">partial</span>('<span class="attr">_custom</span>/<span class="attr">totop</span>') %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"&lt;%- config.root %&gt;js/totop.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<pre><code class="html"> &lt;%- partial(&#39;_custom/totop&#39;) %&gt;
+ &lt;script src=&quot;&lt;%- config.root %&gt;js/totop.js&quot;&gt;&lt;/script&gt;
+</code></pre>
 <p>layout.ejs文件中引入（其他类似）</p>
 <ul>
 <li>相关问题</li>
 </ul>
 <p>返回顶部的速度太慢，修改totop.js文件中的变量即可。</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Our scroll link element</span></span><br><span class="line"><span class="comment">//&lt;div id="totop"&gt;</span></span><br><span class="line"><span class="comment">//获取锚点</span></span><br><span class="line"><span class="keyword">var</span> scrollElem = $(<span class="string">'#totop'</span>);</span><br><span class="line"></span><br><span class="line"><span class="comment">// Scroll to top speed</span></span><br><span class="line"><span class="comment">//滚动速度，值越小越快</span></span><br><span class="line"><span class="keyword">var</span> scrollSpeed = <span class="number">500</span>;</span><br></pre></td></tr></table></figure>
+<pre><code class="js">// Our scroll link element
+//&lt;div id=&quot;totop&quot;&gt;
+//获取锚点
+var scrollElem = $(&#39;#totop&#39;);
+
+// Scroll to top speed
+//滚动速度，值越小越快
+var scrollSpeed = 500;
+</code></pre>
 <p>更多实现方法，见于此<a href="https://www.jb51.net/article/91824.htm" target="_blank" rel="noopener">传送门</a></p>
 
 				</div>
@@ -212,10 +331,59 @@
 	</div> 
 </div>
 
+<!-- code highlight 测试版fix me-->
+<style>
+pre {
+  background: inherit;
+  border: 1px solid #ccc;
+  overflow-x: auto;
+  padding: .5em;
+  position: relative;
+  margin: 0 0 0.8em 0;
+  overflow-y: hidden
+}
+
+pre code {
+  margin: -0.5em !important;
+  padding: 0.5em !important;
+  overflow-y: auto;
+  overflow-x: auto;
+  display: block
+}
+
+code.has-numbering {
+  margin-left: 1.7em !important;
+  word-wrap: normal;
+  word-break: keep-all;
+  white-space: pre
+}
+
+.pre-numbering {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2.2em;
+  height: 100%;
+  padding: 0.5em 0.2em 0.5em 0;
+  border-right: 1px solid #C3CCD0;
+  background-color: #EEE;
+  text-align: right;
+  color: #AAA;
+  list-style: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none
+}
+</style>
+<script src="//cdn.bootcss.com/highlight.js/9.2.0/highlight.min.js"></script>
+
+<!-- css爬取自网页 -->
+<!-- code highlight 测试版fix me-->
 
 
-	</div>
-	<footer>
+		</div>
+		<footer>
 	<div class="blog-text-center">
 		<div class="social">
 				
@@ -258,9 +426,10 @@
 
 
 
-	</main>
+		</main>
 
-	
+		
+
 <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
 
 <script>window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')</script>
@@ -624,5 +793,11 @@
 
 
 
-</body>
-</html>
+<script src="/js/code.js"></script>
+
+
+	</body>
+	</html>
+
+
+

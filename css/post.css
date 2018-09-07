@@ -109,6 +109,7 @@ b {
 	cursor: pointer;
 }
 
+/*
 .content pre,
 .content .highlight {
 	background: #2d2d2d;
@@ -147,6 +148,7 @@ b {
 	text-shadow: none;
 	padding: 0;
 }
+*/
 
 .content blockquote {
 	color: #656565;
@@ -183,6 +185,7 @@ b {
 	padding: 6px 13px;
 }
 
+/*
 .content .highlight pre {
 	border: none;
 	margin: 0;
@@ -222,6 +225,7 @@ b {
 .content .highlight .line {
 	height: 20px;
 }
+*/
 
 .content .video-container {
 	position: relative;
@@ -238,6 +242,7 @@ b {
 	height: 100%;
 }
 
+/*
 pre .comment,
 pre .title {
 	color: #999;
@@ -302,3 +307,4 @@ pre .keyword,
 pre .javascript .function {
 	color: #cc99cc;
 }
+*/
