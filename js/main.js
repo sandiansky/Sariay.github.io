@@ -73,8 +73,8 @@ jQuery(document).ready(function($){
 	var Annie_Random = function() {
 		//generate a random img that pre_name 'from 0 to 110'
 		var random_bg = Math.floor(Math.random() * 109 + 1);
-		var bg = 'url(/img/random/' + random_bg + '.jpg)';
-		//var bg = 'url(https://annie-header-bg-1253939655.cos.ap-beijing.myqcloud.com/' + random_bg + '.jpg)';
+		//var bg = 'url(/img/random/' + random_bg + '.jpg)';
+		var bg = 'url(https://annie-header-bg-1253939655.cos.ap-beijing.myqcloud.com/' + random_bg + '.jpg)';
 		$("header").css("background-image", bg);
 	};
 
