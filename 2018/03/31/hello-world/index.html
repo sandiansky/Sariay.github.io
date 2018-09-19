@@ -163,7 +163,7 @@
 		<ul class="am-pagination">
     
     	<li class="am-pagination-prev">
-   		<a class="pull-left" href="/2018/04/30/中文测试一/" title="[post]中文测试一">
+   		<a class="pull-left" href="/2018/04/30/中文测试二/" title="[post]中文测试二">
       		&laquo;上一篇 
 		</a>
 		</li>
@@ -231,7 +231,7 @@
 		clientID: 'bf19f33d43d567dce87e',
 		clientSecret: '32f473f6f860a8f82ae10fcfd978c83c0954b93f',
 		//id: window.location.pathname,
-		id: md5(location.href.trimEnd('')),
+		id: md5(location.href.trimEnd('#.*$,\\?.*$,index.html$')),
 		repo: 'annie-gitalk',
 		owner: 'Sariay',
 		admin: 'Sariay',

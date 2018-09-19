@@ -247,7 +247,7 @@
 		clientID: 'bf19f33d43d567dce87e',
 		clientSecret: '32f473f6f860a8f82ae10fcfd978c83c0954b93f',
 		//id: window.location.pathname,
-		id: md5(location.href.trimEnd('')),
+		id: md5(location.href.trimEnd('#.*$,\\?.*$,index.html$')),
 		repo: 'annie-gitalk',
 		owner: 'Sariay',
 		admin: 'Sariay',
