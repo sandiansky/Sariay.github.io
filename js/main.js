@@ -75,17 +75,44 @@ jQuery(document).ready(function($){
 		var random_bg = Math.floor(Math.random() * 109 + 1);
 		//var bg = 'url(/img/random/' + random_bg + '.jpg)';
 		var bg = 'url(https://annie-header-bg-1253939655.cos.ap-beijing.myqcloud.com/' + random_bg + '.jpg)';
-		$("header").css("background-image", bg);
+		$("#header-bg-2").css("background-image", bg);
 	};
 
 	/* ToTop */
 	var Annie_ToTop = function() {
-		/* your code */
+		var upperLimit = 500;
+
+		// Our scroll link element
+		var scrollElem = $('#totop');
+
+		// Scroll to top speed
+		var scrollSpeed = 500;
+		scrollElem.hide();
+		$(window).scroll(function() {
+			var scrollTop = $(document).scrollTop();
+			if(scrollTop > upperLimit) {
+				$(scrollElem).stop().fadeTo(300, 1);
+			} else {
+				$(scrollElem).stop().fadeTo(300, 0);
+			}
+		});
+		$(scrollElem).click(function() {
+			$('html, body').animate({
+				scrollTop: 0
+			}, scrollSpeed);
+			return false;
+		});
 	};
 
 	/* Toc */	
 	var Annie_Toc = function() {
-		/* your code */
+		var toc = $("#toc");
+		var scrollTop = 500;
+		/*
+		if (scrollTop / d.documentElement.clientHeight >= 0.4) {
+
+        }
+        */
 	};
 
 	/* other js function */
