@@ -114,16 +114,33 @@ jQuery(document).ready(function($){
         }
         */
 	};
+	
+	/* Show Comment */
+	var Annie_Comment = function() {
+		function Show_Hidden(obj) {
+			obj.style.display = 'block';
+		}
+
+		var obutton = document.getElementById("annie-comment-button");
+		var odiv = document.getElementById("annie-comment-container");
+		obutton.onclick = function() {
+			Show_Hidden(odiv);
+			$("#annie-comment-button").css("display", 'none');
+			return false;
+		}
+
+	};
 
 	/* other js function */
 	/* ... */
-
+	
 	/* Initialize */
 	(function Annie_Init() {
 		Annie_Preloader();
 		Annie_Nav();
 		Annie_Random();
 		Annie_ToTop();
+		Annie_Comment();
 		Annie_Toc();
 	})();
 });
