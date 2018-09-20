@@ -1,4 +1,4 @@
-<!--There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!-->
+<!-- There may be a bug, but don't worry, QiLing(器灵) says that it can work normally. -->
 
 
 
@@ -16,8 +16,8 @@
     <meta name="keywords" content="" />
     <meta name="description" content="" />
    	<!-- css -->
-	<link rel="stylesheet" href="/css/style.css">	
-	
+	<link rel="stylesheet" href="/css/style.css">
+
 	<!-- favicon -->
 	<link href="/img/favicon.ico" rel="Shortcut Icon" type="image/ico">
 	
@@ -38,7 +38,7 @@
 <!--Preloader end-->
 
 
-	<header id="header-bg-1" style="background-image: url( /img/1.jpg );">	
+	<header id="header-bg-2">
 
 	
 		<div id="cd-logo"><a href="/"><img src="/img/logo.png" alt="Logo"></a></div>
@@ -317,7 +317,7 @@ document<span class="token punctuation">.</span><span class="token function">wri
         
 		
 		<div class="theme-annie-comment-button-container">
-	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">显示评论</button>	
+	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">显示评论</button>
 </div>
 
 <div id="annie-comment-container" class="theme-annie-comment-main-container">
@@ -385,14 +385,36 @@ document<span class="token punctuation">.</span><span class="token function">wri
 		owner: 'Sariay',
 		admin: 'Sariay',
 		distractionFreeMode: 'true',
-	}) 
-	gitalk.render('gitalk-container')
+	})
+	gitalk.render('gitalk-container');
 </script>
 		
 	
 
 </div>
 
+<script type="text/javascript">
+	/* Show Comment */
+	var Annie_Comment = function() {
+		function Show_Hidden(obj) {
+			obj.style.display = 'block';
+		}
+
+		var obutton = document.getElementById("annie-comment-button" || "0");
+		var odiv = document.getElementById("annie-comment-container");
+		if( 'obutton' ) {
+			obutton.onclick = function() {
+				Show_Hidden(odiv);
+				$("#annie-comment-button").css("display", 'none');
+				return false;
+			}
+		}
+	};
+
+	(function Annie_Init() {
+		Annie_Comment();
+	})();
+</script>
 
 	</div> 
 </div>

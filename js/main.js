@@ -121,16 +121,17 @@ jQuery(document).ready(function($){
 			obj.style.display = 'block';
 		}
 
-		var obutton = document.getElementById("annie-comment-button");
+		var obutton = document.getElementById("annie-comment-button" || "0");
 		var odiv = document.getElementById("annie-comment-container");
-		obutton.onclick = function() {
-			Show_Hidden(odiv);
-			$("#annie-comment-button").css("display", 'none');
-			return false;
+		if( 'obutton' ) {
+			obutton.onclick = function() {
+				Show_Hidden(odiv);
+				$("#annie-comment-button").css("display", 'none');
+				return false;
+			}
 		}
-
 	};
-
+		
 	/* other js function */
 	/* ... */
 	
@@ -140,7 +141,7 @@ jQuery(document).ready(function($){
 		Annie_Nav();
 		Annie_Random();
 		Annie_ToTop();
-		Annie_Comment();
+		//Annie_Comment();
 		Annie_Toc();
 	})();
 });

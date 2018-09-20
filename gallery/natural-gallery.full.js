@@ -2380,7 +2380,7 @@
 					var n = document.createElement('span');
 					e.appendChild(n), i.Utility.addClass(n, 'natural-gallery-visible');
 					var o = document.createElement('span');
-					o.textContent = '/', e.appendChild(o);
+					o.textContent = ' / ', e.appendChild(o);
 					var l = document.createElement('span');
 					return i.Utility.addClass(l, 'natural-gallery-total'), e.appendChild(l), this.element = document.createElement('div'), this.filters.forEach(function(e) {
 						this.element.appendChild(e.render());
