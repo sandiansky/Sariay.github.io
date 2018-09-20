@@ -4,6 +4,7 @@
 	width: 90%;
 	max-width: 1170px;
 	margin: 0 auto;
+	color: #000000;
 }
 
 .cd-container::after {
@@ -130,6 +131,10 @@ header h1 {
 	display: block;
 	padding: 1.6em;
 	border-bottom: 1px solid #eff2f6;
+	/*font style*/
+	font-weight: normal;
+	font-family: "KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+
 }
 
 #cd-nav li:last-child a {

@@ -7,7 +7,7 @@
 		
 
 <head>
-	<title>Archives: 2018/5</title>
+	<title>文章归档: 2018/5</title>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="apple-mobile-web-app-title" content="Amaze UI" />
@@ -37,24 +37,79 @@
 </div>
 <!--Preloader end-->
 
+<!-- header -->
 
-	<header id="header-bg-2">
+	<header id="header-bg-1" style="background-image: url( /img/1.jpg );">	
 
 	
 		<div id="cd-logo"><a href="/"><img src="/img/logo.png" alt="Logo"></a></div>
 	
-		
+	
+	<!-- motto or description -->
 		
  		<p class="motto"></p>
 	
 	
+	<!-- current page name or title -->
 	
 		
-			<p class="page-name"></p>
 		
-		
+			
+			<!-- && is_current('archives/index.html') -->
 			<p class="page-name">文章归档</p>
 		
+		
+	
+	
+	<!-- others: such as change-bg, time... -->
+	<p class="page-name-other">
+		9/21/2018 
+		<script type="text/javascript">
+	function changeHeaderBg(){
+		var random_bg = Math.floor(Math.random() * 109 + 1);
+		var bg = 'url(https://annie-header-bg-1253939655.cos.ap-beijing.myqcloud.com/' + random_bg + '.jpg)';
+		$("#header-bg-2").css("background-image", bg);
+	}
+</script>
+<style type="text/css">
+	header:after {
+		content: '';
+		position: relative;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		background: #222222;
+		opacity: .5;
+		z-index: -1;
+	}
+	
+	.change-header-bg{
+		/*
+		position: absolute;
+		color: black;
+		left: 50px;
+		top: 50px;
+		*/
+	}
+	.change-header-bg i{
+		text-align: center;
+		cursor: pointer;
+		pointer-events: bounding-box;
+	}
+	@media(max-width:512px) {
+		.change-header-bg {
+			display: none;
+			visibility: hidden;
+		}
+	}
+	
+</style>
+<span class="change-header-bg">
+	——&nbsp;<i  class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>	
+</span>
+
+	</p>	
 	
 </header>
 
@@ -95,6 +150,7 @@
 		</ul>
 	</nav>
 </div>
+
 
 
 		<main>
@@ -238,12 +294,23 @@
 	.motto {
 		color: #000000;
 		font-size: 20px;
-		margin: 60px 20px 0 20px;
+		margin: 100px 25% 0;
+		width: 50%;
 		line-height: 1.4;
-		
-		font-family: "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;;
-
+		font-family:"KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
 		text-align: center;
+	}
+	@media(max-width: 890px) {
+		.motto {	
+			margin: 100px 10% 0;
+			width: 80%;
+		}
+	}
+	@media(max-width: 890px) {
+		.motto {
+			margin: 100px 5% 0;
+			width: 90%;
+		}
 	}
 </style>
 

@@ -82,13 +82,25 @@ main {
 	min-height: 500px;
 }
 
-.page-name {
+.page-name, .page-name-other {
 	color: #000000;
-	font-size: 20px;
-	margin: 60px 20px 0 20px;
-	line-height: 1.4;
-	font-family: 'Fang Song', 'Song', 'STSong', sans-serif;
 	text-align: center;
+	font-size: 20px;
+	line-height: 1.4em;
+	font-style: italic;
+	font-family: "KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
+	margin: 100px 20px 0 20px;
+}
+
+@media(max-width:512px) {
+	.page-name, .page-name-other {
+		/*
+		display: none;
+		visibility: hidden;
+		*/
+		margin: 60px 5% 0;
+		width: 90%;
+	}
 }
 
 a {
