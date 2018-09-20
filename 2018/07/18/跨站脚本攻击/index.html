@@ -316,7 +316,11 @@ document<span class="token punctuation">.</span><span class="token function">wri
  </ul>
         
 		
-		<div class="theme-annie-comment">
+		<div class="theme-annie-comment-button-container">
+	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">显示评论</button>	
+</div>
+
+<div id="annie-comment-container" class="theme-annie-comment-main-container">
 
 	
 		
@@ -331,8 +335,9 @@ document<span class="token punctuation">.</span><span class="token function">wri
 <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
 
-<script>
+<script type="text/javascript">
 	//去除尾部匹配正则数组的字符串  
+	//remove redundant characters
 	String.prototype.trimEnd = function(regStr) {
 		var result = this;
 		if(regStr == undefined || regStr == null || regStr == "") {
@@ -368,9 +373,8 @@ document<span class="token punctuation">.</span><span class="token function">wri
 			}
 		}
 	};
-</script>
 
-<script type="text/javascript">
+	//create gitalk
 	var gitalk = new Gitalk({
 		clientID: 'bf19f33d43d567dce87e',
 		clientSecret: '32f473f6f860a8f82ae10fcfd978c83c0954b93f',
