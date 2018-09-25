@@ -1,4 +1,8 @@
-
+<!--
+	作者：Sariay
+	时间：2018-09-25
+	描述：There may be a bug, but don't worry, QiLing(器灵) says that it can work normally!
+-->
 
 
 	<!DOCTYPE html>
@@ -239,16 +243,17 @@
 <div id="valineComment" class="comment"></div>
 
 <!-- valine`s js & css -->
-<script>window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')</script>
-
-
+<script>
+	window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')
+</script>
 <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
 <script src="/js/valine.min.js"></script>
 <link rel="stylesheet" href="/css/comment.css">
 
 <script>
-	
-	        	new Valine({     
+	var checkExistComment = setInterval(function() {
+		if( $('#valineComment').length ) {
+			new Valine({
 				// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
 				av: AV,
 				//使用id寻找div元素（使用class可能找不到）
@@ -258,9 +263,10 @@
 				app_id: "DU84u3YWC8In5QjcOvBiDFlo-gzGzoHsz", //获取APP ID
 				app_key: "Ae6l2pVhIBRlKbN115rMdn8K", //获取APP KEY
 				placeholder: "no any!", //评论框占位提示文字        			
-        	});
-
-
+			});
+			clearInterval(checkExistComment);
+		}
+	}, 100);
 </script>
 		
 	
