@@ -53,10 +53,6 @@
     cursor: pointer;
 }
 
-.valine .vlist .vcard .vavatar img {
-	src: url(/img/logo.png);
-}
-
 .valine .vlist .vcard .vfooter .vat {
     background: transparent;
     color: #ffffff;

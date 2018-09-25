@@ -304,10 +304,8 @@
 <link rel="stylesheet" href="/css/comment.css">
 
 <script>
-
-	var checkExistComment = setInterval(function() {
-   		if ( $('.comment').length ) {
-        	new Valine({     
+	
+	        	new Valine({     
 				// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
 				av: AV,
 				//使用id寻找div元素（使用class可能找不到）
@@ -318,9 +316,8 @@
 				app_key: "Ae6l2pVhIBRlKbN115rMdn8K", //获取APP KEY
 				placeholder: "no any!", //评论框占位提示文字        			
         	});
-    		clearInterval(checkExistComment);
-    	}
- 	}, 100);
+
+
 </script>
 		
 	
