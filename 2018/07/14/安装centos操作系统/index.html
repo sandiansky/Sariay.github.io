@@ -250,7 +250,7 @@
 		
 			<!-- comment valine -->
 			<!-- show valine comment -->
-<div id="vcomment" class="comment"></div>
+<div id="valineComment" class="comment"></div>
 
 <!-- valine`s js -->
 <script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -259,22 +259,19 @@
 
 <script>
 
-	var checkExist = setInterval(function() {
+	var checkExistComment = setInterval(function() {
    		if ( $('.comment').length ) {
         	new Valine({     
-		// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
-		av: AV,
-		el: '#vcomment,
-		emoticon_url: 'https://cloud.panjunwen.com/alu',
-		emoticon_list: ["吐.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png"],
-		app_id: "DU84u3YWC8In5QjcOvBiDFlo-gzGzoHsz", //获取APP ID
-		app_key: "Ae6l2pVhIBRlKbN115rMdn8K", //获取APP KEY
-		placeholder: "no any!", //评论框占位提示文字        		
-        		
-        		
-        		
+				// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+				av: AV,
+				el: '#valineComment',
+				emoticon_url: 'https://cloud.panjunwen.com/alu',
+				emoticon_list: ["吐.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png"],
+				app_id: "DU84u3YWC8In5QjcOvBiDFlo-gzGzoHsz", //获取APP ID
+				app_key: "Ae6l2pVhIBRlKbN115rMdn8K", //获取APP KEY
+				placeholder: "no any!", //评论框占位提示文字        			
         	});
-    		clearInterval(checkExist);
+    		clearInterval(checkExistComment);
     	}
  	}, 100);
 </script>
