@@ -44,3 +44,23 @@
   left: 0.5em;
   top: 1.2375em;
 }
+
+/* vline details */
+.valine .vwrap {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #ededed;
+    cursor: pointer;
+}
+
+.valine .vlist .vcard .vfooter .vat {
+    background: transparent;
+    color: #ffffff;
+    padding: .2em 1em;
+    line-height: 1.6;
+    cursor: pointer;
+    word-break: keep-all;
+    text-transform: uppercase;
+    display: inline-block;
+    /*display: inline-block;  fix button ‘回复’ display on Firefox*/
+}
