@@ -234,7 +234,10 @@
 <script src="/js/valine.min.js"></script>
 
 <script>
-	new Valine({
+
+	var checkExist = setInterval(function() {
+   		if ( $('.comment').length ) {
+        	new Valine({     
 		// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
 		av: AV,
 		el: '.comment',
@@ -242,8 +245,14 @@
 		emoticon_list: ["吐.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png"],
 		app_id: "DU84u3YWC8In5QjcOvBiDFlo-gzGzoHsz", //获取APP ID
 		app_key: "Ae6l2pVhIBRlKbN115rMdn8K", //获取APP KEY
-		placeholder: "no any!", //评论框占位提示文字
-	});
+		placeholder: "no any!", //评论框占位提示文字        		
+        		
+        		
+        		
+        	});
+    		clearInterval(checkExist);
+    	}
+ 	}, 100);
 </script>
 		
 	
