@@ -32,7 +32,7 @@
 		<!--Preloader-->
 <div id="preloader">
 	<div id="status">
-		<img alt="preloader" src="/img/logo.png">
+		<img alt="PRELOADER" src="/img/logo.png">
 	</div>
 </div>
 <!--Preloader end-->
@@ -62,15 +62,8 @@
 	
 	<!-- others: such as change-bg, time... -->
 	<p class="page-name-other">
-		9/21/2018 
-		<script type="text/javascript">
-	function changeHeaderBg(){
-		var random_bg = Math.floor(Math.random() * 109 + 1);
-		var bg = 'url(https://annie-header-bg-1253939655.cos.ap-beijing.myqcloud.com/' + random_bg + '.jpg)';
-		$("#header-bg-2").css("background-image", bg);
-	}
-</script>
-<style type="text/css">
+		9/25/2018 
+		<style type="text/css">
 	header:after {
 		content: '';
 		position: relative;
@@ -84,12 +77,7 @@
 	}
 	
 	.change-header-bg{
-		/*
-		position: absolute;
-		color: black;
-		left: 50px;
-		top: 50px;
-		*/
+		font-style: normal;
 	}
 	.change-header-bg i{
 		text-align: center;
@@ -104,14 +92,22 @@
 	}
 	
 </style>
+
+<script type="text/javascript">
+	function changeHeaderBg(){
+		var random_bg = Math.floor(Math.random() * 109 + 1);
+		var bg = 'url(https://annie-header-bg-1253939655.cos.ap-beijing.myqcloud.com/' + random_bg + '.jpg)';
+		$("#header-bg-2").css("background-image", bg);
+	}
+</script>
+
 <span class="change-header-bg">
 	——&nbsp;<i  class="fa fa-camera-retro" onclick="changeHeaderBg()"></i>	
 </span>
-
-	</p>	
-	
+	</p>		
 </header>
 
+<!-- nav -->
 <div id="cd-nav">
 	<a href="#0" title="menu" class="cd-nav-trigger"><span></span></a>
 
@@ -150,16 +146,15 @@
 	</nav>
 </div>
 
-
-
-		<main>
+		<!--main-->
+		<main> 
 		<div class="page-container">
-		
-    <!-- content srart -->
+		<!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed blog-content">
 	<div class="am-u-md-8 am-u-sm-12">
 
 		<article class="am-article blog-article-p">
+
 			<div class="am-article-hd">
 				
 
@@ -173,8 +168,6 @@
 		</a>
 	
 
-
-
 				</h1>
 
 				<p class="am-article-meta blog-text-center">
@@ -187,19 +180,20 @@
 </a>    
 &nbsp;
 					</span>
+					
 					<span>						
 						
 							<i class="fa fa-tags"></i>
 							
-								<a href="#开发实践" title="开发实践" rel="3">开发实践</a>&nbsp;
+								<a href="#开发实践" title="开发实践" rel="4">开发实践</a>&nbsp;
 													 											
 						
-					</span>	
+					</span>
 				</p>
-			</div>	
+			</div>
 
 			<div class="am-article-bd">
-				<div class="content">
+				<div class="content" id="post-content">
 					
 						<p><strong>todo</strong></p>
 <table>
@@ -497,101 +491,59 @@ $ <span class="token function">git</span> commit -m <span class="token string">"
 </blockquote>
 
 					
-
 				</div>
 			</div>
-
 		</article>
 
 		<ul class="am-pagination">
     
     	<li class="am-pagination-prev">
    		<a class="pull-left" href="/2018/08/10/博客开发问题记录/" title="博客开发问题记录">
-      		&laquo;上一篇 
+      		&laquo; 上一篇
 		</a>
 		</li>
 	
 	
 		<li class="am-pagination-next">
 		<a class="pull-right" href="/2018/08/02/Github入门术语/" title="Github入门术语">
-			下一篇&raquo;
+			下一篇 &raquo;
 		</a>
 		</li>
 	 
  </ul>
         
-		
+
 		<div class="theme-annie-comment-button-container">
-	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">加载评论</button>
+	<button id="annie-comment-button" class="theme-annie-comment-button" onclick="Annie_Comment()">
+		加载评论
+		<!--加载评论-->
+	</button>
 </div>
 
 <div id="annie-comment-container" class="theme-annie-comment-main-container">
 
 	
 		
-			<!-- comment gitalk -->
-			<!-- show gitalk comment -->
+			<!-- comment valine -->
+			<!-- show valine comment -->
+<div class="comment valine"></div>
 
-  <div id="gitalk-container"></div>
+<!-- valine`s js -->
+<script src="https://cdnjs.loli.net/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="/js/valine.min.js"></script>
 
-
-<!-- gitalk`s css & js -->
-<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-<link rel="stylesheet" href="/css/comment.css">
-<script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
-<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-
-<script type="text/javascript">
-	//去除尾部匹配正则数组的字符串  
-	//remove redundant characters
-	String.prototype.trimEnd = function(regStr) {
-		var result = this;
-		if(regStr == undefined || regStr == null || regStr == "") {
-			return result;
-		}
-		var array = regStr.split(',');
-
-		if(array.length > 0) {
-
-			var c = array.shift();
-			var str = this;
-			var i = str.length;
-			var rg = new RegExp(c);
-			var matchArr = str.match(rg);
-
-			if(matchArr != undefined && matchArr != null && matchArr.length > 0) {
-				var matchStr = matchArr[0].replace(/\\/g, "\\\\").replace(/\*/g, "\\*")
-					.replace(/\+/g, "\\+").replace(/\|/g, "\\|")
-					.replace(/\{/g, "\\{").replace(/\}/g, "\\}")
-					.replace(/\(/g, "\\(").replace(/\)/g, "\\)")
-					.replace(/\^/g, "\\^").replace(/\$/g, "\\$")
-					.replace(/\[/g, "\\[").replace(/\]/g, "\\]")
-					.replace(/\?/g, "\\?").replace(/\,/g, "\\,")
-					.replace(/\./g, "\\.").replace(/\&/g, "\\&");
-				matchStr = matchStr + '$';
-				result = str.replace(new RegExp(matchStr), "");
-			}
-
-			if(array.length > 0) {
-				return result.trimEnd(array.join())
-			} else {
-				return result;
-			}
-		}
-	};
-
-	//create gitalk
-	var gitalk = new Gitalk({
-		clientID: 'bf19f33d43d567dce87e',
-		clientSecret: '32f473f6f860a8f82ae10fcfd978c83c0954b93f',
-		//id: window.location.pathname,
-		id: md5(location.href.trimEnd('#.*$,\\?.*$,index.html$')),
-		repo: 'annie-gitalk',
-		owner: 'Sariay',
-		admin: 'Sariay',
-		distractionFreeMode: 'true',
-	})
-	gitalk.render('gitalk-container');
+<script>
+	new Valine({
+		// AV 对象来自上面引入av-min.js(老司机们不要开车➳♡゛扎心了老铁)
+		av: AV,
+		el: '.comment',
+		emoticon_url: 'https://cloud.panjunwen.com/alu',
+		emoticon_list: ["吐.png", "期待.png", "高兴.png", "吐血倒地.png", "哭泣.png", "欢呼.png"],
+		app_id: "DU84u3YWC8In5QjcOvBiDFlo-gzGzoHsz", //获取APP ID
+		app_key: "Ae6l2pVhIBRlKbN115rMdn8K", //获取APP KEY
+		placeholder: "no any!", //评论框占位提示文字
+	});
 </script>
 		
 	
@@ -604,7 +556,9 @@ $ <span class="token function">git</span> commit -m <span class="token string">"
 		function Show_Hidden(obj) {
 			obj.style.display = 'block';
 		}
-
+		
+		//var obutton = $('#annie-comment-button');
+		//var obutton = $('#annie-comment-container');
 		var obutton = document.getElementById("annie-comment-button" || "0");
 		var odiv = document.getElementById("annie-comment-container");
 		if( 'obutton' ) {
@@ -620,11 +574,20 @@ $ <span class="token function">git</span> commit -m <span class="token string">"
 		Annie_Comment();
 	})();
 </script>
+		
+		<!--
+	时间：2018-09-24
+	描述：The TOC module refers to 'https://github.com/codefine/hexo-theme-mellow', include toc.ejs、toc.js、toc.css. All rights reserved by codefine. 
+-->
 
-	</div> 
+	
+
+	</div>
 </div>
-
 		</div>
+		</main>
+		
+		<!--footer-->
 		<footer>
 	<div class="blog-text-center">
 		<div class="theme-annie-social">
@@ -668,41 +631,6 @@ $ <span class="token function">git</span> commit -m <span class="token string">"
 
 
 
-		<!--back to top-->
-        <style type="text/css">
-	#totop {
-		background: white;
-		border-radius: 50%;
-		position: fixed;
-		right: 5.4%;
-		bottom: 80px;
-		cursor: pointer;
-	}
-	
-	#totop a {
-		color: #474747;
-		background-color: transparent;
-		padding: 10px;
-		text-decoration: none;
-	}
-	
-	@media(max-width:512px) {
-		#totop {
-			display: none;
-			visibility: hidden;
-		}
-	}
-</style>
-
-
-	<div id="totop">
-  		<a href="javascript:;" class="fa fa-arrow-up"></a>
-	</div>
-
-
-
-		</main>
-
 		<!-- <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script> -->
 
 <script>window.jQuery || document.write('<script src="/js/jquery-2.1.1.min.js"><\/script>')</script>
@@ -733,7 +661,7 @@ $ <span class="token function">git</span> commit -m <span class="token string">"
 
 
 	<script src="/js/motto.js"></script>
-	<script>
+	<script type="text/javascript">
 		$(".motto").html(getMingYanContent());
 	</script>	
 
@@ -1077,7 +1005,43 @@ $ <span class="token function">git</span> commit -m <span class="token string">"
 
 
 
-<script src="/js/main.js"></script> 
+
+	<script type="text/javascript" src="/js/toc.js"></script>
+
+
+<script type="text/javascript" src="/js/main.js"></script> 
+		
+		<!--back to top-->
+        <style type="text/css">
+	#totop {
+		background: white;
+		border-radius: 50%;
+		position: fixed;
+		right: 5.4%;
+		bottom: 80px;
+		cursor: pointer;
+	}
+	
+	#totop a {
+		color: #474747;
+		background-color: transparent;
+		padding: 10px;
+		text-decoration: none;
+	}
+	
+	@media(max-width:512px) {
+		#totop {
+			display: none;
+			visibility: hidden;
+		}
+	}
+</style>
+
+
+	<div id="totop">
+  		<a href="javascript:;" class="fa fa-arrow-up"></a>
+	</div>
+
 	</body>
 	</html>
 
