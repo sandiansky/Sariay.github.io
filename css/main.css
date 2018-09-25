@@ -87,7 +87,7 @@ main {
 	text-align: center;
 	font-size: 20px;
 	line-height: 1.4em;
-	font-style: italic;
+	
 	font-family: "KaiTi", "STXingkai", "Source Sans Pro", "Segoe UI", "Lucida Grande", Helvetica, Arial, "Microsoft YaHei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", FontAwesome, sans-serif;
 	margin: 100px 20px 0 20px;
 }
@@ -105,13 +105,11 @@ main {
 
 a {
 	color: #474747;
-	padding: 5px;
 	text-decoration: none;
 }
 
 a:hover {
 	color: #000000;
-	padding: 0.5rem;
 }
 
 img {
@@ -139,6 +137,7 @@ footer {
 
 footer a {
 	color: #fff;
+	display: inline-block;
 }
 
 footer span {
@@ -151,7 +150,7 @@ footer span {
 }
 
 .theme-annie-social a {
-	padding: 10px;
+	margin: 0 10px 0 10px;
 	color: #fff;
 }
 
