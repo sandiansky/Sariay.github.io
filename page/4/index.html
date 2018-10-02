@@ -65,7 +65,7 @@
 	
 	<!-- others: such as change-bg, time... -->
 	<p class="page-name-other">
-		9/26/2018 
+		10/2/2018 
 		<style type="text/css">
 	header:after {
 		content: '';
@@ -155,12 +155,41 @@
 		<main> 
 		<div class="page-container">
 		
-	<!-- content srart -->
+	<style type="text/css">
+	#pagination {
+		margin: 20px 0 100px 0;
+		text-align: center
+	}
+	
+	#pagination a {
+		background-color: #FF6666;
+		padding: 10px 30px;
+		border: 1px #ddd solid;
+		-webkit-border-radius: 40px;
+		-moz-border-radius: 40px;
+		border-radius: 40px;
+		color: #FFFFFF
+	}
+	
+	#pagination a.loading,
+	#pagination a:hover {
+		padding: 10px 30px;
+		border: 1px #F96B4D solid;
+		-webkit-border-radius: 40px;
+		-moz-border-radius: 40px;
+		border-radius: 40px;
+		background-color: #F96B4D;
+		color: #fff
+	}
+</style>
+
+<!-- content srart -->
 <div class="am-g am-g-fixed blog-fixed">
 	<div class="am-u-md-12 am-u-sm-12">
 
+		<div class="content" id="archive">
 		
-			<article class="am-g blog-entry-article">
+			<article class="am-g blog-entry-article" id="post-list">
 
 				<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
 					<img src="/img/cart_cover.jpg" class="am-u-sm-12">
@@ -207,7 +236,7 @@
 		
 			</article>
 		
-			<article class="am-g blog-entry-article">
+			<article class="am-g blog-entry-article" id="post-list">
 
 				<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
 					<img src="/img/cart_cover.jpg" class="am-u-sm-12">
@@ -256,7 +285,7 @@
 		
 			</article>
 		
-			<article class="am-g blog-entry-article">
+			<article class="am-g blog-entry-article" id="post-list">
 
 				<div class="am-u-lg-6 am-u-md-12 am-u-sm-12 blog-entry-img">
 					<img src="/img/cart_cover.jpg" class="am-u-sm-12">
@@ -301,7 +330,9 @@ Quick
 		
 			</article>
 		     
-
+		</div>
+		
+		<!--
 		
 	<ul class="am-pagination">
 		
@@ -317,10 +348,18 @@ Quick
         
   
   
-	
+
+		-->
+		<div id="pagination">
+    		  				
+		</div>
+		
+		
 	</div>
 </div>
 <!-- content end -->
+
+
 
 	<!--图文风格-->
 
