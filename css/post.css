@@ -256,6 +256,11 @@ b {
 	height: 100%;
 }
 
+code, pre {
+    font-size: 1.125rem;
+    background-color: #f8f8f8;
+} 
+
 pre .comment,
 pre .title {
 	color: #999;
