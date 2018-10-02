@@ -202,72 +202,29 @@
 					
 						<h3 id="首页的使用"><a href="#首页的使用" class="headerlink" title="首页的使用"></a>首页的使用</h3><p>首页文章展示有两种模式：图文模式<code>cart</code>和纯净模式<code>pure</code>。默认图文模式（<code>index-style: cart</code>），你只需编辑主题目录下的<code>_config.yml</code>，设置<code>index-style</code>的参数，即可使用或扩展相关的文章展示模式。</p>
 <h4 id="关于首页分页问题"><a href="#关于首页分页问题" class="headerlink" title="关于首页分页问题"></a>关于首页分页问题</h4><p>hexo博客默认首页不分页，置参数<code>index_generator.per_page</code>为1、2、3…..以达到分页目的。</p>
-<pre class="line-numbers language-yml"><code class="language-yml"># Home page setting
-# path: Root path for your blogs index page. (default = '')
-# per_page: Posts displayed per page. (0 = disable pagination)
-# order_by: Posts order. (Order by date descending by default)
-index_generator:
-  path: ''
-  per_page: 5
-  order_by: -date
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Home page setting</span></span><br><span class="line"><span class="comment"># path: Root path for your blogs index page. (default = '')</span></span><br><span class="line"><span class="comment"># per_page: Posts displayed per page. (0 = disable pagination)</span></span><br><span class="line"><span class="comment"># order_by: Posts order. (Order by date descending by default)</span></span><br><span class="line"><span class="attr">index_generator:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">''</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">5</span></span><br><span class="line"><span class="attr">  order_by:</span> <span class="bullet">-date</span></span><br></pre></td></tr></table></figure>
 <h4 id="关于归档页分页问题"><a href="#关于归档页分页问题" class="headerlink" title="关于归档页分页问题"></a>关于归档页分页问题</h4><p>hexo博客默认归档页不分页，置参数<code>archive_generator.per_page</code>为1、2、3…..以达到分页目的。</p>
-<pre class="line-numbers language-yml"><code class="language-yml">archive: 1
-category: 1
-tag: 1
-
-archive_generator:
-  per_page: 10
-
-tag_generator:
-  per_page: 0
-
-category_generator: 
-  per_page: 0
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">archive:</span> <span class="number">1</span></span><br><span class="line"><span class="attr">category:</span> <span class="number">1</span></span><br><span class="line"><span class="attr">tag:</span> <span class="number">1</span></span><br><span class="line"></span><br><span class="line"><span class="attr">archive_generator:</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">10</span></span><br><span class="line"></span><br><span class="line"><span class="attr">tag_generator:</span></span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="attr">category_generator:</span> </span><br><span class="line"><span class="attr">  per_page:</span> <span class="number">0</span></span><br></pre></td></tr></table></figure>
 <h3 id="分类页的使用"><a href="#分类页的使用" class="headerlink" title="分类页的使用"></a>分类页的使用</h3><p>执行命令，创建分类页</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ hexo new page categories
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page categories</span><br></pre></td></tr></table></figure>
 <p>然后编辑站点目录下的<code>source/categories/index.md</code>，添加如下<code>Front-matter</code></p>
-<pre class="line-numbers language-yml"><code class="language-yml">layout: categories
-type: categories
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">layout:</span> <span class="string">categories</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">categories</span></span><br></pre></td></tr></table></figure>
 <h3 id="标签页的使用"><a href="#标签页的使用" class="headerlink" title="标签页的使用"></a>标签页的使用</h3><p>执行命令，创建标签页</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ hexo new page tags
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page tags</span><br></pre></td></tr></table></figure>
 <p>然后编辑站点目录下的<code>source/tags/index.md</code>，添加如下<code>Front-matter</code></p>
-<pre class="line-numbers language-yml"><code class="language-yml">layout: tags
-type: tags
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">layout:</span> <span class="string">tags</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">tags</span></span><br></pre></td></tr></table></figure>
 <h3 id="关于页的使用"><a href="#关于页的使用" class="headerlink" title="关于页的使用"></a>关于页的使用</h3><p>执行命令，创建关于页</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ hexo new page about
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page about</span><br></pre></td></tr></table></figure>
 <p>然后编辑站点目录下的<code>source/about/index.md</code>，添加如下<code>Front-matter</code></p>
-<pre class="line-numbers language-yml"><code class="language-yml">layout: about
-type: about
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">layout:</span> <span class="string">about</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">about</span></span><br></pre></td></tr></table></figure>
 <h3 id="背景图片设置"><a href="#背景图片设置" class="headerlink" title="背景图片设置"></a>背景图片设置</h3><ul>
 <li>使用固定图片，请确保参数<code>enable</code>为<u>true</u>，然后设置参数<code>url</code>的值</li>
 </ul>
-<pre class="line-numbers language-yml"><code class="language-yml"># background_image
-# img/01.jpg
-# https://source.unsplash.com/collection/954550/1920x1080
-background_image:
-    enable: false
-    # url: https://source.unsplash.com/collection/954550/1920x1080
-    url: img/1.jpg
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># background_image</span></span><br><span class="line"><span class="comment"># img/01.jpg</span></span><br><span class="line"><span class="comment"># https://source.unsplash.com/collection/954550/1920x1080</span></span><br><span class="line"><span class="attr">background_image:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">false</span></span><br><span class="line">	<span class="comment"># url: https://source.unsplash.com/collection/954550/1920x1080</span></span><br><span class="line">	<span class="attr">url:</span> <span class="string">img/1.jpg</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li>使用unplash随机图片，请确保参数<code>enable</code>为true，然后设置参数<code>url</code>的值 </li>
 </ul>
-<pre class="line-numbers language-yml"><code class="language-yml"># background_image
-# img/01.jpg
-# https://source.unsplash.com/collection/954550/1920x1080
-background_image:
-    enable: false
-    #url: img/1.jpg
-    url: https://source.unsplash.com/collection/954550/1920x1080
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># background_image</span></span><br><span class="line"><span class="comment"># img/01.jpg</span></span><br><span class="line"><span class="comment"># https://source.unsplash.com/collection/954550/1920x1080</span></span><br><span class="line"><span class="attr">background_image:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment">#url: img/1.jpg</span></span><br><span class="line">	<span class="attr">url:</span> <span class="attr">https://source.unsplash.com/collection/954550/1920x1080</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><p>使用自定义随机图片，请确保参数<code>enable</code>为false，然后设置参数<code>customRadom_url</code>的值即可 。具体：</p>
 <p>1-fork <a href="https://github.com/Sariay/Random-img" target="_blank" rel="noopener">随即图片集</a> </p>
@@ -276,96 +233,26 @@ background_image:
 <p>4-设置customRadom_url为获得的相对地址</p>
 </li>
 </ul>
-<pre class="line-numbers language-yml"><code class="language-yml"># background_image
-# img/01.jpg
-# https://source.unsplash.com/collection/954550/1920x1080
-background_image:
-    enable: false
-    #url: https://source.unsplash.com/collection/954550/1920x1080
-    url: img/1.jpg
-    #custom Radom img
-    customRadom_url: https://XXX-youname-XXX.github.io/Random-img/
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># background_image</span></span><br><span class="line"><span class="comment"># img/01.jpg</span></span><br><span class="line"><span class="comment"># https://source.unsplash.com/collection/954550/1920x1080</span></span><br><span class="line"><span class="attr">background_image:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">false</span></span><br><span class="line">    <span class="comment">#url: https://source.unsplash.com/collection/954550/1920x1080</span></span><br><span class="line"><span class="attr">    url:</span> <span class="string">img/1.jpg</span></span><br><span class="line">    <span class="comment">#custom Radom img</span></span><br><span class="line"><span class="attr">    customRadom_url:</span> <span class="attr">https://XXX-youname-XXX.github.io/Random-img/</span></span><br></pre></td></tr></table></figure>
 <p>关于其他方式请自行扩展（ps：如你偏爱访问速度🙃，尽可能使用<strong>固定图片</strong>）</p>
 <h3 id="相册页的使用"><a href="#相册页的使用" class="headerlink" title="相册页的使用"></a>相册页的使用</h3><p>执行命令，创建相册页</p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ hexo new page gallery
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new page gallery</span><br></pre></td></tr></table></figure>
 <p>然后编辑站点目录下的<code>source/gallery/index.md</code>，添加如下<code>Front-matter</code></p>
-<pre class="line-numbers language-yml"><code class="language-yml">layout: gallery
-type: gallery
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">layout:</span> <span class="string">gallery</span></span><br><span class="line"><span class="attr">type:</span> <span class="string">gallery</span></span><br></pre></td></tr></table></figure>
 <p>打开文件Annie/source/gallery/<strong>data.json</strong>, 按照格式在数组[……]中添加gallery的图片数据。<strong>注意：</strong>下列注释在json文件中无效，使用时请去掉注释。（<u>此处注释仅为说明</u>）</p>
-<pre class="line-numbers language-json"><code class="language-json"><span class="token punctuation">[</span>
-<span class="token punctuation">{</span><span class="token punctuation">}</span><span class="token punctuation">,</span> 
-<span class="token punctuation">{</span>
-        <span class="token property">"thumbnail"</span><span class="token operator">:</span> <span class="token string">"https://img.jpg"</span><span class="token punctuation">,</span>                 //小图路径
-        <span class="token property">"enlarged"</span><span class="token operator">:</span> <span class="token string">"https://img.jpg"</span><span class="token punctuation">,</span>                 //大图路径（可与小图一致）
-        <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"百里守约"</span><span class="token punctuation">,</span>                        //图片标题
-        <span class="token property">"categories"</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">{</span>
-                <span class="token property">"id"</span><span class="token operator">:</span> <span class="token number">9</span><span class="token punctuation">,</span>                            //根据id来进行分类
-                <span class="token property">"title"</span><span class="token operator">:</span> <span class="token string">"百里玄策"</span><span class="token punctuation">,</span>
-                <span class="token property">"photo_count"</span><span class="token operator">:</span> <span class="token number">41787</span><span class="token punctuation">,</span>                 //可忽略
-                <span class="token property">"links"</span><span class="token operator">:</span> <span class="token punctuation">{</span>                            //可忽略
-                    <span class="token property">"self"</span><span class="token operator">:</span> <span class="token string">"https://img.jpg"</span><span class="token punctuation">,</span>
-                    <span class="token property">"photos"</span><span class="token operator">:</span> <span class="token string">"https://img.jpg"</span>
-                <span class="token punctuation">}</span>
-            <span class="token punctuation">}</span>
-        <span class="token punctuation">]</span><span class="token punctuation">,</span>
-        <span class="token property">"tWidth"</span><span class="token operator">:</span> <span class="token number">800.6130030959752</span><span class="token punctuation">,</span>                //小图相对宽度
-        <span class="token property">"tHeight"</span><span class="token operator">:</span> <span class="token number">500</span><span class="token punctuation">,</span>                               //小图相对高度
-        <span class="token property">"eWidth"</span><span class="token operator">:</span> <span class="token number">3630</span><span class="token punctuation">,</span>                               //大图相对宽度
-        <span class="token property">"eHeight"</span><span class="token operator">:</span> <span class="token number">2907</span>                               //大图相对高度
-    <span class="token punctuation">}</span><span class="token punctuation">,</span>
-    <span class="token punctuation">{</span><span class="token punctuation">}</span>
- <span class="token punctuation">]</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">&#123;&#125;, </span><br><span class="line">&#123;</span><br><span class="line">        "thumbnail": "https://img.jpg",    	 		//小图路径</span><br><span class="line">        "enlarged": "https://img.jpg",			 	//大图路径（可与小图一致）</span><br><span class="line">        "title": "百里守约",						//图片标题</span><br><span class="line">        "categories": [&#123;</span><br><span class="line">                "id": 9,							//根据id来进行分类</span><br><span class="line">                "title": "百里玄策",</span><br><span class="line">                "photo_count": 41787,				 //可忽略</span><br><span class="line">                "links": &#123;							//可忽略</span><br><span class="line">                    "self": "https://img.jpg",</span><br><span class="line">                    "photos": "https://img.jpg"</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        ],</span><br><span class="line">        "tWidth": 800.6130030959752,				//小图相对宽度</span><br><span class="line">        "tHeight": 500,							   //小图相对高度</span><br><span class="line">        "eWidth": 3630,							   //大图相对宽度</span><br><span class="line">        "eHeight": 2907							   //大图相对高度</span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;&#125;</span><br><span class="line"> ]</span><br></pre></td></tr></table></figure>
 <p>当然，你可以将该文件<strong>data.json</strong>移至其他目录，相应地修改路径<code>gallery_data</code>。</p>
-<pre class="line-numbers language-yml"><code class="language-yml">#主题目录下的_config.yml文件
-......
-#gallery 
-#format: natural or square
-gallery_format: natural
-#one time to load 4 rows or other count(0,1,2,3,4,5,6......)
-gallery_limit: 4
-#data url
-gallery_data: gallery/data.json
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#主题目录下的_config.yml文件</span></span><br><span class="line"><span class="string">......</span></span><br><span class="line"><span class="comment">#gallery </span></span><br><span class="line"><span class="comment">#format: natural or square</span></span><br><span class="line"><span class="attr">gallery_format:</span> <span class="string">natural</span></span><br><span class="line"><span class="comment">#one time to load 4 rows or other count(0,1,2,3,4,5,6......)</span></span><br><span class="line"><span class="attr">gallery_limit:</span> <span class="number">4</span></span><br><span class="line"><span class="comment">#data url</span></span><br><span class="line"><span class="attr">gallery_data:</span> <span class="string">gallery/data.json</span></span><br></pre></td></tr></table></figure>
 <h3 id="站内搜索的使用"><a href="#站内搜索的使用" class="headerlink" title="站内搜索的使用"></a>站内搜索的使用</h3><p>执行命令，安装插件<code>hexo-generator-search-zip</code></p>
-<pre class="line-numbers language-bash"><code class="language-bash">$ <span class="token function">npm</span> <span class="token function">install</span> hexo-generator-search-zip --save
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-generator-search-zip --save</span><br></pre></td></tr></table></figure>
 <p>编辑站点目录下的<code>_config.yml</code>，添加如下语句</p>
-<pre class="line-numbers language-yml"><code class="language-yml">search:
-  path: search.json
-  zipPath: search.zip
-  versionPath: searchVersion.txt
-  field: post
-  #field: post, page or all（3个可选参数）
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">search:</span></span><br><span class="line"><span class="attr">  path:</span> <span class="string">search.json</span></span><br><span class="line"><span class="attr">  zipPath:</span> <span class="string">search.zip</span></span><br><span class="line"><span class="attr">  versionPath:</span> <span class="string">searchVersion.txt</span></span><br><span class="line"><span class="attr">  field:</span> <span class="string">post</span></span><br><span class="line">  <span class="comment">#field: post, page or all（3个可选参数）</span></span><br></pre></td></tr></table></figure>
 <p>编辑主题目录下的<code>_config.yml</code>，添加如下语句</p>
-<pre class="line-numbers language-yml"><code class="language-yml"># Local search
-# Dependencies: https://github.com/flashlab/hexo-generator-search
-local_search:
-    enable: true
-    # if auto, trigger search by changing input
-    # if manual, trigger search by pressing enter key or search button
-    trigger: auto
-    # show top n results per article, show all results by setting to -1
-    top_n_per_article: 2
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Local search</span></span><br><span class="line"><span class="comment"># Dependencies: https://github.com/flashlab/hexo-generator-search</span></span><br><span class="line"><span class="attr">local_search:</span></span><br><span class="line"><span class="attr">    enable:</span> <span class="literal">true</span></span><br><span class="line">    <span class="comment"># if auto, trigger search by changing input</span></span><br><span class="line">    <span class="comment"># if manual, trigger search by pressing enter key or search button</span></span><br><span class="line"><span class="attr">    trigger:</span> <span class="string">auto</span></span><br><span class="line">    <span class="comment"># show top n results per article, show all results by setting to -1</span></span><br><span class="line"><span class="attr">    top_n_per_article:</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
 <h3 id="关于代码高亮"><a href="#关于代码高亮" class="headerlink" title="关于代码高亮"></a>关于代码高亮</h3><p>执行命令，安装插件<code>hexo-prism-plugin</code></p>
-<pre class="line-numbers language-bash"><code class="language-bash"><span class="token function">npm</span> i -S hexo-prism-plugin
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i -S hexo-prism-plugin</span><br></pre></td></tr></table></figure>
 <p>编辑站点目录下的<code>_config.yml</code>，关闭hexo自带的高亮插件<code>highlight.enable</code>，并添加如下语句</p>
-<pre class="line-numbers language-yml"><code class="language-yml">highlight:
-  enable: false
-......
-
-prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
-  theme: 'default'
-  line_number: true    # default false
-  custom_css: 'path/to/your/custom.css'     # optional
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">highlight:</span></span><br><span class="line"><span class="attr">  enable:</span> <span class="literal">false</span></span><br><span class="line"><span class="string">......</span></span><br><span class="line"></span><br><span class="line"><span class="attr">prism_plugin:</span></span><br><span class="line"><span class="attr">  mode:</span> <span class="string">'preprocess'</span>    <span class="comment"># realtime/preprocess</span></span><br><span class="line"><span class="attr">  theme:</span> <span class="string">'default'</span></span><br><span class="line"><span class="attr">  line_number:</span> <span class="literal">true</span>    <span class="comment"># default false</span></span><br><span class="line"><span class="attr">  custom_css:</span> <span class="string">'path/to/your/custom.css'</span>     <span class="comment"># optional</span></span><br></pre></td></tr></table></figure>
 <p><strong>注意：</strong>如要显示代码行号，请指定<u>相应代码块</u>的<u>语言类型</u>。（html、js、c++、java……）</p>
 <h3 id="关于评论功能"><a href="#关于评论功能" class="headerlink" title="关于评论功能"></a>关于评论功能</h3><p>hexo-theme-Annie主题集成了gitalk和valine评论插件，你可以参考下列文档使用。</p>
 <ul>
